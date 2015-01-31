@@ -1,0 +1,35 @@
+{
+  "name": "guitar-hero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "guitar.js",
+  "scripts": {
+    "test": "mocha test/*.coffee --compilers coffee:coffee-script/register",
+    "gulp": "gulp",
+    "watch": "watchify app.coffee -o bundle.js -v",
+    "browserify": "browserify -t coffee-reactify app.coffee > bundle.js",
+    "build": "npm run browserify ",
+    "start": "npm run watch & gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^8.1.0",
+    "mocha": "^2.1.0",
+    "react": "^0.12.2",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "coffee-reactify": "^2.1.0",
+    "gulp": "^3.8.10",
+    "gulp-stylus": "^2.0.0",
+    "reactify": "^0.17.1",
+    "watchify": "^2.2.1"
+  },
+  "browserify": {
+    "transform": [
+      "coffee-reactify"
+    ]
+  }
+}

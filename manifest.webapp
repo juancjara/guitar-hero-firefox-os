@@ -1,0 +1,15 @@
+{
+  "name": "guitar hero",
+  "description": "you know",
+  "icons": {
+    "60": "",
+    "128": ""
+  },
+  "orientation": "portrait",
+  "developer": {
+    "name": "GG",
+    "url": "asdf"
+  },
+  "launch_path": "/index.html",
+  "default_locale": "en"
+}
