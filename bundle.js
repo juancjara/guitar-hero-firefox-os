@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/home/juancarlos/Github/guitar-hero/DB/levelsDB.coffee":[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/home/juancarlos/Github/guitar-hero-firefox-os/DB/levelsDB.coffee":[function(require,module,exports){
 var data, levelsDB;
 
 data = [
@@ -83,7 +83,7 @@ module.exports.levelsDB = levelsDB;
 
 
 
-},{}],"/home/juancarlos/Github/guitar-hero/app.coffee":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/app.coffee":[function(require,module,exports){
 var App, React, checkFirstTime, initData, initialize;
 
 React = require('react');
@@ -103,10 +103,8 @@ initData = function(value) {
 
 checkFirstTime = function(value) {
   if (value) {
-    console.log('hay');
     initialize();
   } else {
-    console.log('no hay');
     localforage.clear(function() {
       return localforage.setItem('firstTime', 'done').then(initData);
     });
@@ -117,7 +115,7 @@ localforage.getItem('firstTime').then(checkFirstTime);
 
 
 
-},{"./components/App.react.coffee":"/home/juancarlos/Github/guitar-hero/components/App.react.coffee","react":"/home/juancarlos/Github/guitar-hero/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero/components/About.react.coffee":[function(require,module,exports){
+},{"./components/App.react.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/components/App.react.coffee","react":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/components/About.react.coffee":[function(require,module,exports){
 var About, React;
 
 React = require('react');
@@ -149,7 +147,7 @@ module.exports = About = React.createClass({
 
 
 
-},{"react":"/home/juancarlos/Github/guitar-hero/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero/components/App.react.coffee":[function(require,module,exports){
+},{"react":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/components/App.react.coffee":[function(require,module,exports){
 var About, App, Dispatcher, Game, Help, MainMenu, React, SongList;
 
 React = require('react');
@@ -223,7 +221,7 @@ module.exports = App = React.createClass({
 
 
 
-},{"./../dispatcher.coffee":"/home/juancarlos/Github/guitar-hero/dispatcher.coffee","./About.react.coffee":"/home/juancarlos/Github/guitar-hero/components/About.react.coffee","./Game.react.coffee":"/home/juancarlos/Github/guitar-hero/components/Game.react.coffee","./Help.react.coffee":"/home/juancarlos/Github/guitar-hero/components/Help.react.coffee","./MainMenu.react.coffee":"/home/juancarlos/Github/guitar-hero/components/MainMenu.react.coffee","./SongList.react.coffee":"/home/juancarlos/Github/guitar-hero/components/SongList.react.coffee","react":"/home/juancarlos/Github/guitar-hero/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero/components/Game.react.coffee":[function(require,module,exports){
+},{"./../dispatcher.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/dispatcher.coffee","./About.react.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/components/About.react.coffee","./Game.react.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/components/Game.react.coffee","./Help.react.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/components/Help.react.coffee","./MainMenu.react.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/components/MainMenu.react.coffee","./SongList.react.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/components/SongList.react.coffee","react":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/components/Game.react.coffee":[function(require,module,exports){
 var Dispatcher, Game, Guitar, React, guitar, levelsDB;
 
 React = require('react');
@@ -374,7 +372,7 @@ module.exports = Game = React.createClass({
 
 
 
-},{"./../DB/levelsDB.coffee":"/home/juancarlos/Github/guitar-hero/DB/levelsDB.coffee","./../dispatcher.coffee":"/home/juancarlos/Github/guitar-hero/dispatcher.coffee","./../guitar.js":"/home/juancarlos/Github/guitar-hero/guitar.js","react":"/home/juancarlos/Github/guitar-hero/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero/components/Help.react.coffee":[function(require,module,exports){
+},{"./../DB/levelsDB.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/DB/levelsDB.coffee","./../dispatcher.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/dispatcher.coffee","./../guitar.js":"/home/juancarlos/Github/guitar-hero-firefox-os/guitar.js","react":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/components/Help.react.coffee":[function(require,module,exports){
 var Help, React;
 
 React = require('react');
@@ -402,7 +400,7 @@ module.exports = Help = React.createClass({
 
 
 
-},{"react":"/home/juancarlos/Github/guitar-hero/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero/components/MainMenu.react.coffee":[function(require,module,exports){
+},{"react":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/components/MainMenu.react.coffee":[function(require,module,exports){
 var MainMenu, React;
 
 React = require('react');
@@ -434,7 +432,7 @@ module.exports = MainMenu = React.createClass({
 
 
 
-},{"react":"/home/juancarlos/Github/guitar-hero/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero/components/SongList.react.coffee":[function(require,module,exports){
+},{"react":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/components/SongList.react.coffee":[function(require,module,exports){
 var Dispatcher, React, SongItem, SongList, levelsDB;
 
 React = require('react');
@@ -543,7 +541,7 @@ module.exports = SongList = React.createClass({
 
 
 
-},{"./../DB/levelsDB.coffee":"/home/juancarlos/Github/guitar-hero/DB/levelsDB.coffee","./../dispatcher.coffee":"/home/juancarlos/Github/guitar-hero/dispatcher.coffee","react":"/home/juancarlos/Github/guitar-hero/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero/dispatcher.coffee":[function(require,module,exports){
+},{"./../DB/levelsDB.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/DB/levelsDB.coffee","./../dispatcher.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/dispatcher.coffee","react":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/dispatcher.coffee":[function(require,module,exports){
 var queue, val;
 
 queue = {};
@@ -561,7 +559,7 @@ module.exports.Dispatcher = {
 
 
 
-},{}],"/home/juancarlos/Github/guitar-hero/guitar.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/guitar.js":[function(require,module,exports){
 
 var Guitar = function() {
   var canvas = document.getElementById("screen");
@@ -969,7 +967,7 @@ var loadSound = function(url, callback) {
 
 module.exports.Guitar = Guitar;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/AutoFocusMixin.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/AutoFocusMixin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -996,7 +994,7 @@ var AutoFocusMixin = {
 
 module.exports = AutoFocusMixin;
 
-},{"./focusNode":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/focusNode.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/BeforeInputEventPlugin.js":[function(require,module,exports){
+},{"./focusNode":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/focusNode.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/BeforeInputEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013 Facebook, Inc.
  * All rights reserved.
@@ -1218,7 +1216,7 @@ var BeforeInputEventPlugin = {
 
 module.exports = BeforeInputEventPlugin;
 
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPropagators.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js","./SyntheticInputEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticInputEvent.js","./keyOf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyOf.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CSSProperty.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPropagators.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js","./SyntheticInputEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticInputEvent.js","./keyOf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyOf.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CSSProperty.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -1337,7 +1335,7 @@ var CSSProperty = {
 
 module.exports = CSSProperty;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CSSPropertyOperations.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CSSPropertyOperations.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -1472,7 +1470,7 @@ var CSSPropertyOperations = {
 module.exports = CSSPropertyOperations;
 
 }).call(this,require('_process'))
-},{"./CSSProperty":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CSSProperty.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js","./camelizeStyleName":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/camelizeStyleName.js","./dangerousStyleValue":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/dangerousStyleValue.js","./hyphenateStyleName":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/hyphenateStyleName.js","./memoizeStringOnly":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/memoizeStringOnly.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CallbackQueue.js":[function(require,module,exports){
+},{"./CSSProperty":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CSSProperty.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js","./camelizeStyleName":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/camelizeStyleName.js","./dangerousStyleValue":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/dangerousStyleValue.js","./hyphenateStyleName":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/hyphenateStyleName.js","./memoizeStringOnly":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/memoizeStringOnly.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CallbackQueue.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -1572,7 +1570,7 @@ PooledClass.addPoolingTo(CallbackQueue);
 module.exports = CallbackQueue;
 
 }).call(this,require('_process'))
-},{"./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/PooledClass.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ChangeEventPlugin.js":[function(require,module,exports){
+},{"./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/PooledClass.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ChangeEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -1954,7 +1952,7 @@ var ChangeEventPlugin = {
 
 module.exports = ChangeEventPlugin;
 
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginHub.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPropagators.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactUpdates.js","./SyntheticEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticEvent.js","./isEventSupported":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/isEventSupported.js","./isTextInputElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/isTextInputElement.js","./keyOf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyOf.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ClientReactRootIndex.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginHub.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPropagators.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactUpdates.js","./SyntheticEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticEvent.js","./isEventSupported":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/isEventSupported.js","./isTextInputElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/isTextInputElement.js","./keyOf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyOf.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ClientReactRootIndex.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -1979,7 +1977,7 @@ var ClientReactRootIndex = {
 
 module.exports = ClientReactRootIndex;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CompositionEventPlugin.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CompositionEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -2238,7 +2236,7 @@ var CompositionEventPlugin = {
 
 module.exports = CompositionEventPlugin;
 
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPropagators.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js","./ReactInputSelection":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInputSelection.js","./SyntheticCompositionEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticCompositionEvent.js","./getTextContentAccessor":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getTextContentAccessor.js","./keyOf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyOf.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMChildrenOperations.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPropagators.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js","./ReactInputSelection":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInputSelection.js","./SyntheticCompositionEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticCompositionEvent.js","./getTextContentAccessor":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getTextContentAccessor.js","./keyOf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyOf.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMChildrenOperations.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -2413,7 +2411,7 @@ var DOMChildrenOperations = {
 module.exports = DOMChildrenOperations;
 
 }).call(this,require('_process'))
-},{"./Danger":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Danger.js","./ReactMultiChildUpdateTypes":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMultiChildUpdateTypes.js","./getTextContentAccessor":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getTextContentAccessor.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMProperty.js":[function(require,module,exports){
+},{"./Danger":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Danger.js","./ReactMultiChildUpdateTypes":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMultiChildUpdateTypes.js","./getTextContentAccessor":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getTextContentAccessor.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMProperty.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -2712,7 +2710,7 @@ var DOMProperty = {
 module.exports = DOMProperty;
 
 }).call(this,require('_process'))
-},{"./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMPropertyOperations.js":[function(require,module,exports){
+},{"./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMPropertyOperations.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -2909,7 +2907,7 @@ var DOMPropertyOperations = {
 module.exports = DOMPropertyOperations;
 
 }).call(this,require('_process'))
-},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMProperty.js","./escapeTextForBrowser":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/escapeTextForBrowser.js","./memoizeStringOnly":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/memoizeStringOnly.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Danger.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMProperty.js","./escapeTextForBrowser":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/escapeTextForBrowser.js","./memoizeStringOnly":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/memoizeStringOnly.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Danger.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -3095,7 +3093,7 @@ var Danger = {
 module.exports = Danger;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js","./createNodesFromMarkup":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/createNodesFromMarkup.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyFunction.js","./getMarkupWrap":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getMarkupWrap.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DefaultEventPluginOrder.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js","./createNodesFromMarkup":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/createNodesFromMarkup.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyFunction.js","./getMarkupWrap":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getMarkupWrap.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DefaultEventPluginOrder.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -3135,7 +3133,7 @@ var DefaultEventPluginOrder = [
 
 module.exports = DefaultEventPluginOrder;
 
-},{"./keyOf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyOf.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EnterLeaveEventPlugin.js":[function(require,module,exports){
+},{"./keyOf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyOf.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EnterLeaveEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -3275,7 +3273,7 @@ var EnterLeaveEventPlugin = {
 
 module.exports = EnterLeaveEventPlugin;
 
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPropagators.js","./ReactMount":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMount.js","./SyntheticMouseEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticMouseEvent.js","./keyOf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyOf.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPropagators.js","./ReactMount":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMount.js","./SyntheticMouseEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticMouseEvent.js","./keyOf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyOf.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -3347,7 +3345,7 @@ var EventConstants = {
 
 module.exports = EventConstants;
 
-},{"./keyMirror":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyMirror.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventListener.js":[function(require,module,exports){
+},{"./keyMirror":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyMirror.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventListener.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014 Facebook, Inc.
@@ -3437,7 +3435,7 @@ var EventListener = {
 module.exports = EventListener;
 
 }).call(this,require('_process'))
-},{"./emptyFunction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyFunction.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginHub.js":[function(require,module,exports){
+},{"./emptyFunction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyFunction.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginHub.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -3713,7 +3711,7 @@ var EventPluginHub = {
 module.exports = EventPluginHub;
 
 }).call(this,require('_process'))
-},{"./EventPluginRegistry":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginRegistry.js","./EventPluginUtils":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginUtils.js","./accumulateInto":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/forEachAccumulated.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginRegistry.js":[function(require,module,exports){
+},{"./EventPluginRegistry":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginRegistry.js","./EventPluginUtils":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginUtils.js","./accumulateInto":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/forEachAccumulated.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginRegistry.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -3993,7 +3991,7 @@ var EventPluginRegistry = {
 module.exports = EventPluginRegistry;
 
 }).call(this,require('_process'))
-},{"./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginUtils.js":[function(require,module,exports){
+},{"./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginUtils.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -4214,7 +4212,7 @@ var EventPluginUtils = {
 module.exports = EventPluginUtils;
 
 }).call(this,require('_process'))
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPropagators.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPropagators.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -4356,7 +4354,7 @@ var EventPropagators = {
 module.exports = EventPropagators;
 
 }).call(this,require('_process'))
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginHub.js","./accumulateInto":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/forEachAccumulated.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginHub.js","./accumulateInto":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/forEachAccumulated.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -4401,7 +4399,7 @@ var ExecutionEnvironment = {
 
 module.exports = ExecutionEnvironment;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/HTMLDOMPropertyConfig.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/HTMLDOMPropertyConfig.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -4593,7 +4591,7 @@ var HTMLDOMPropertyConfig = {
 
 module.exports = HTMLDOMPropertyConfig;
 
-},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMProperty.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/LinkedValueUtils.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMProperty.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/LinkedValueUtils.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -4749,7 +4747,7 @@ var LinkedValueUtils = {
 module.exports = LinkedValueUtils;
 
 }).call(this,require('_process'))
-},{"./ReactPropTypes":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPropTypes.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/LocalEventTrapMixin.js":[function(require,module,exports){
+},{"./ReactPropTypes":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPropTypes.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/LocalEventTrapMixin.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014, Facebook, Inc.
@@ -4799,7 +4797,7 @@ var LocalEventTrapMixin = {
 module.exports = LocalEventTrapMixin;
 
 }).call(this,require('_process'))
-},{"./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserEventEmitter.js","./accumulateInto":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/forEachAccumulated.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/MobileSafariClickEventPlugin.js":[function(require,module,exports){
+},{"./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserEventEmitter.js","./accumulateInto":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/forEachAccumulated.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/MobileSafariClickEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -4857,7 +4855,7 @@ var MobileSafariClickEventPlugin = {
 
 module.exports = MobileSafariClickEventPlugin;
 
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyFunction.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyFunction.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js":[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -4904,7 +4902,7 @@ function assign(target, sources) {
 
 module.exports = assign;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/PooledClass.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/PooledClass.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -5020,7 +5018,7 @@ var PooledClass = {
 module.exports = PooledClass;
 
 }).call(this,require('_process'))
-},{"./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/React.js":[function(require,module,exports){
+},{"./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/React.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -5208,7 +5206,7 @@ React.version = '0.12.2';
 module.exports = React;
 
 }).call(this,require('_process'))
-},{"./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMPropertyOperations.js","./EventPluginUtils":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginUtils.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js","./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./ReactChildren":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactChildren.js","./ReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactComponent.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCompositeComponent.js","./ReactContext":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCurrentOwner.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOM.js","./ReactDOMComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMComponent.js","./ReactDefaultInjection":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDefaultInjection.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElementValidator.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInstanceHandles.js","./ReactLegacyElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactLegacyElement.js","./ReactMount":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMount.js","./ReactMultiChild":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMultiChild.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPerf.js","./ReactPropTypes":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPropTypes.js","./ReactServerRendering":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactServerRendering.js","./ReactTextComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactTextComponent.js","./deprecated":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/deprecated.js","./onlyChild":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/onlyChild.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserComponentMixin.js":[function(require,module,exports){
+},{"./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMPropertyOperations.js","./EventPluginUtils":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginUtils.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js","./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./ReactChildren":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactChildren.js","./ReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactComponent.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCompositeComponent.js","./ReactContext":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCurrentOwner.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOM.js","./ReactDOMComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMComponent.js","./ReactDefaultInjection":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDefaultInjection.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElementValidator.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInstanceHandles.js","./ReactLegacyElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactLegacyElement.js","./ReactMount":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMount.js","./ReactMultiChild":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMultiChild.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPerf.js","./ReactPropTypes":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPropTypes.js","./ReactServerRendering":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactServerRendering.js","./ReactTextComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactTextComponent.js","./deprecated":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/deprecated.js","./onlyChild":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/onlyChild.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserComponentMixin.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -5251,7 +5249,7 @@ var ReactBrowserComponentMixin = {
 module.exports = ReactBrowserComponentMixin;
 
 }).call(this,require('_process'))
-},{"./ReactEmptyComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactEmptyComponent.js","./ReactMount":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMount.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserEventEmitter.js":[function(require,module,exports){
+},{"./ReactEmptyComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactEmptyComponent.js","./ReactMount":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMount.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserEventEmitter.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -5606,7 +5604,7 @@ var ReactBrowserEventEmitter = assign({}, ReactEventEmitterMixin, {
 
 module.exports = ReactBrowserEventEmitter;
 
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginHub.js","./EventPluginRegistry":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginRegistry.js","./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./ReactEventEmitterMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactEventEmitterMixin.js","./ViewportMetrics":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ViewportMetrics.js","./isEventSupported":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/isEventSupported.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactChildren.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginHub.js","./EventPluginRegistry":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginRegistry.js","./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./ReactEventEmitterMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactEventEmitterMixin.js","./ViewportMetrics":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ViewportMetrics.js","./isEventSupported":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/isEventSupported.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactChildren.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -5756,7 +5754,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 }).call(this,require('_process'))
-},{"./PooledClass":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/PooledClass.js","./traverseAllChildren":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/traverseAllChildren.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactComponent.js":[function(require,module,exports){
+},{"./PooledClass":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/PooledClass.js","./traverseAllChildren":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/traverseAllChildren.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -6199,7 +6197,7 @@ var ReactComponent = {
 module.exports = ReactComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactOwner":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactOwner.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","./keyMirror":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyMirror.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactComponentBrowserEnvironment.js":[function(require,module,exports){
+},{"./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactOwner":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactOwner.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","./keyMirror":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyMirror.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactComponentBrowserEnvironment.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -6321,7 +6319,7 @@ var ReactComponentBrowserEnvironment = {
 module.exports = ReactComponentBrowserEnvironment;
 
 }).call(this,require('_process'))
-},{"./ReactDOMIDOperations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMIDOperations.js","./ReactMarkupChecksum":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMarkupChecksum.js","./ReactMount":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPerf.js","./ReactReconcileTransaction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactReconcileTransaction.js","./getReactRootElementInContainer":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getReactRootElementInContainer.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","./setInnerHTML":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/setInnerHTML.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCompositeComponent.js":[function(require,module,exports){
+},{"./ReactDOMIDOperations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMIDOperations.js","./ReactMarkupChecksum":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMarkupChecksum.js","./ReactMount":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPerf.js","./ReactReconcileTransaction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactReconcileTransaction.js","./getReactRootElementInContainer":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getReactRootElementInContainer.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","./setInnerHTML":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/setInnerHTML.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCompositeComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -7761,7 +7759,7 @@ var ReactCompositeComponent = {
 module.exports = ReactCompositeComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./ReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactComponent.js","./ReactContext":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElementValidator.js","./ReactEmptyComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactEmptyComponent.js","./ReactErrorUtils":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactErrorUtils.js","./ReactLegacyElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactLegacyElement.js","./ReactOwner":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactOwner.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPerf.js","./ReactPropTransferer":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPropTransferer.js","./ReactPropTypeLocationNames":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPropTypeLocationNames.js","./ReactPropTypeLocations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPropTypeLocations.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactUpdates.js","./instantiateReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/instantiateReactComponent.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","./keyMirror":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyMirror.js","./keyOf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyOf.js","./mapObject":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/mapObject.js","./monitorCodeUse":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/monitorCodeUse.js","./shouldUpdateReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/shouldUpdateReactComponent.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactContext.js":[function(require,module,exports){
+},{"./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./ReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactComponent.js","./ReactContext":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElementValidator.js","./ReactEmptyComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactEmptyComponent.js","./ReactErrorUtils":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactErrorUtils.js","./ReactLegacyElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactLegacyElement.js","./ReactOwner":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactOwner.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPerf.js","./ReactPropTransferer":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPropTransferer.js","./ReactPropTypeLocationNames":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPropTypeLocationNames.js","./ReactPropTypeLocations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPropTypeLocations.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactUpdates.js","./instantiateReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/instantiateReactComponent.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","./keyMirror":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyMirror.js","./keyOf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyOf.js","./mapObject":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/mapObject.js","./monitorCodeUse":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/monitorCodeUse.js","./shouldUpdateReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/shouldUpdateReactComponent.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactContext.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -7823,7 +7821,7 @@ var ReactContext = {
 
 module.exports = ReactContext;
 
-},{"./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCurrentOwner.js":[function(require,module,exports){
+},{"./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCurrentOwner.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -7857,7 +7855,7 @@ var ReactCurrentOwner = {
 
 module.exports = ReactCurrentOwner;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOM.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOM.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -8040,7 +8038,7 @@ var ReactDOM = mapObject({
 module.exports = ReactDOM;
 
 }).call(this,require('_process'))
-},{"./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElementValidator.js","./ReactLegacyElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactLegacyElement.js","./mapObject":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/mapObject.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMButton.js":[function(require,module,exports){
+},{"./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElementValidator.js","./ReactLegacyElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactLegacyElement.js","./mapObject":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/mapObject.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMButton.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -8105,7 +8103,7 @@ var ReactDOMButton = ReactCompositeComponent.createClass({
 
 module.exports = ReactDOMButton;
 
-},{"./AutoFocusMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/AutoFocusMixin.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./keyMirror":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyMirror.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMComponent.js":[function(require,module,exports){
+},{"./AutoFocusMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/AutoFocusMixin.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./keyMirror":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyMirror.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -8592,7 +8590,7 @@ assign(
 module.exports = ReactDOMComponent;
 
 }).call(this,require('_process'))
-},{"./CSSPropertyOperations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CSSPropertyOperations.js","./DOMProperty":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMProperty.js","./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMPropertyOperations.js","./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactComponent.js","./ReactMount":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMount.js","./ReactMultiChild":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMultiChild.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPerf.js","./escapeTextForBrowser":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/escapeTextForBrowser.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","./isEventSupported":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/isEventSupported.js","./keyOf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyOf.js","./monitorCodeUse":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/monitorCodeUse.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMForm.js":[function(require,module,exports){
+},{"./CSSPropertyOperations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CSSPropertyOperations.js","./DOMProperty":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMProperty.js","./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMPropertyOperations.js","./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactComponent.js","./ReactMount":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMount.js","./ReactMultiChild":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMultiChild.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPerf.js","./escapeTextForBrowser":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/escapeTextForBrowser.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","./isEventSupported":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/isEventSupported.js","./keyOf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyOf.js","./monitorCodeUse":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/monitorCodeUse.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMForm.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -8642,7 +8640,7 @@ var ReactDOMForm = ReactCompositeComponent.createClass({
 
 module.exports = ReactDOMForm;
 
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./LocalEventTrapMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/LocalEventTrapMixin.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMIDOperations.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./LocalEventTrapMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/LocalEventTrapMixin.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMIDOperations.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -8828,7 +8826,7 @@ var ReactDOMIDOperations = {
 module.exports = ReactDOMIDOperations;
 
 }).call(this,require('_process'))
-},{"./CSSPropertyOperations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CSSPropertyOperations.js","./DOMChildrenOperations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMChildrenOperations.js","./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMPropertyOperations.js","./ReactMount":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPerf.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","./setInnerHTML":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/setInnerHTML.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMImg.js":[function(require,module,exports){
+},{"./CSSPropertyOperations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CSSPropertyOperations.js","./DOMChildrenOperations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMChildrenOperations.js","./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMPropertyOperations.js","./ReactMount":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPerf.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","./setInnerHTML":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/setInnerHTML.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMImg.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -8876,7 +8874,7 @@ var ReactDOMImg = ReactCompositeComponent.createClass({
 
 module.exports = ReactDOMImg;
 
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./LocalEventTrapMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/LocalEventTrapMixin.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMInput.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./LocalEventTrapMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/LocalEventTrapMixin.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMInput.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -9054,7 +9052,7 @@ var ReactDOMInput = ReactCompositeComponent.createClass({
 module.exports = ReactDOMInput;
 
 }).call(this,require('_process'))
-},{"./AutoFocusMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/AutoFocusMixin.js","./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMPropertyOperations.js","./LinkedValueUtils":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactMount":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMount.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMOption.js":[function(require,module,exports){
+},{"./AutoFocusMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/AutoFocusMixin.js","./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMPropertyOperations.js","./LinkedValueUtils":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactMount":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMount.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMOption.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -9107,7 +9105,7 @@ var ReactDOMOption = ReactCompositeComponent.createClass({
 module.exports = ReactDOMOption;
 
 }).call(this,require('_process'))
-},{"./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMSelect.js":[function(require,module,exports){
+},{"./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMSelect.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -9291,7 +9289,7 @@ var ReactDOMSelect = ReactCompositeComponent.createClass({
 
 module.exports = ReactDOMSelect;
 
-},{"./AutoFocusMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/AutoFocusMixin.js","./LinkedValueUtils":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactUpdates.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMSelection.js":[function(require,module,exports){
+},{"./AutoFocusMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/AutoFocusMixin.js","./LinkedValueUtils":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactUpdates.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMSelection.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -9500,7 +9498,7 @@ var ReactDOMSelection = {
 
 module.exports = ReactDOMSelection;
 
-},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js","./getNodeForCharacterOffset":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getNodeForCharacterOffset.js","./getTextContentAccessor":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getTextContentAccessor.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMTextarea.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js","./getNodeForCharacterOffset":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getNodeForCharacterOffset.js","./getTextContentAccessor":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getTextContentAccessor.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMTextarea.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -9641,7 +9639,7 @@ var ReactDOMTextarea = ReactCompositeComponent.createClass({
 module.exports = ReactDOMTextarea;
 
 }).call(this,require('_process'))
-},{"./AutoFocusMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/AutoFocusMixin.js","./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMPropertyOperations.js","./LinkedValueUtils":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDefaultBatchingStrategy.js":[function(require,module,exports){
+},{"./AutoFocusMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/AutoFocusMixin.js","./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMPropertyOperations.js","./LinkedValueUtils":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCompositeComponent.js","./ReactDOM":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOM.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDefaultBatchingStrategy.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -9714,7 +9712,7 @@ var ReactDefaultBatchingStrategy = {
 
 module.exports = ReactDefaultBatchingStrategy;
 
-},{"./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactUpdates.js","./Transaction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Transaction.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyFunction.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDefaultInjection.js":[function(require,module,exports){
+},{"./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactUpdates.js","./Transaction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Transaction.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyFunction.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDefaultInjection.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -9843,7 +9841,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'))
-},{"./BeforeInputEventPlugin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/BeforeInputEventPlugin.js","./ChangeEventPlugin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ChangeEventPlugin.js","./ClientReactRootIndex":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ClientReactRootIndex.js","./CompositionEventPlugin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CompositionEventPlugin.js","./DefaultEventPluginOrder":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DefaultEventPluginOrder.js","./EnterLeaveEventPlugin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EnterLeaveEventPlugin.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js","./HTMLDOMPropertyConfig":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/HTMLDOMPropertyConfig.js","./MobileSafariClickEventPlugin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/MobileSafariClickEventPlugin.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactComponentBrowserEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactComponentBrowserEnvironment.js","./ReactDOMButton":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMButton.js","./ReactDOMComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMComponent.js","./ReactDOMForm":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMForm.js","./ReactDOMImg":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMImg.js","./ReactDOMInput":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMInput.js","./ReactDOMOption":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMOption.js","./ReactDOMSelect":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMSelect.js","./ReactDOMTextarea":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMTextarea.js","./ReactDefaultBatchingStrategy":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDefaultBatchingStrategy.js","./ReactDefaultPerf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDefaultPerf.js","./ReactEventListener":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactEventListener.js","./ReactInjection":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInjection.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInstanceHandles.js","./ReactMount":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMount.js","./SVGDOMPropertyConfig":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SVGDOMPropertyConfig.js","./SelectEventPlugin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SelectEventPlugin.js","./ServerReactRootIndex":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ServerReactRootIndex.js","./SimpleEventPlugin":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SimpleEventPlugin.js","./createFullPageComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/createFullPageComponent.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDefaultPerf.js":[function(require,module,exports){
+},{"./BeforeInputEventPlugin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/BeforeInputEventPlugin.js","./ChangeEventPlugin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ChangeEventPlugin.js","./ClientReactRootIndex":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ClientReactRootIndex.js","./CompositionEventPlugin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CompositionEventPlugin.js","./DefaultEventPluginOrder":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DefaultEventPluginOrder.js","./EnterLeaveEventPlugin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EnterLeaveEventPlugin.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js","./HTMLDOMPropertyConfig":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/HTMLDOMPropertyConfig.js","./MobileSafariClickEventPlugin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/MobileSafariClickEventPlugin.js","./ReactBrowserComponentMixin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactComponentBrowserEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactComponentBrowserEnvironment.js","./ReactDOMButton":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMButton.js","./ReactDOMComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMComponent.js","./ReactDOMForm":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMForm.js","./ReactDOMImg":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMImg.js","./ReactDOMInput":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMInput.js","./ReactDOMOption":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMOption.js","./ReactDOMSelect":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMSelect.js","./ReactDOMTextarea":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMTextarea.js","./ReactDefaultBatchingStrategy":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDefaultBatchingStrategy.js","./ReactDefaultPerf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDefaultPerf.js","./ReactEventListener":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactEventListener.js","./ReactInjection":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInjection.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInstanceHandles.js","./ReactMount":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMount.js","./SVGDOMPropertyConfig":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SVGDOMPropertyConfig.js","./SelectEventPlugin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SelectEventPlugin.js","./ServerReactRootIndex":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ServerReactRootIndex.js","./SimpleEventPlugin":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SimpleEventPlugin.js","./createFullPageComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/createFullPageComponent.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDefaultPerf.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -10103,7 +10101,7 @@ var ReactDefaultPerf = {
 
 module.exports = ReactDefaultPerf;
 
-},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMProperty.js","./ReactDefaultPerfAnalysis":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDefaultPerfAnalysis.js","./ReactMount":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPerf.js","./performanceNow":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/performanceNow.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDefaultPerfAnalysis.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMProperty.js","./ReactDefaultPerfAnalysis":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDefaultPerfAnalysis.js","./ReactMount":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPerf.js","./performanceNow":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/performanceNow.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDefaultPerfAnalysis.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -10309,7 +10307,7 @@ var ReactDefaultPerfAnalysis = {
 
 module.exports = ReactDefaultPerfAnalysis;
 
-},{"./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js":[function(require,module,exports){
+},{"./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014, Facebook, Inc.
@@ -10555,7 +10553,7 @@ ReactElement.isValidElement = function(object) {
 module.exports = ReactElement;
 
 }).call(this,require('_process'))
-},{"./ReactContext":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCurrentOwner.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElementValidator.js":[function(require,module,exports){
+},{"./ReactContext":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCurrentOwner.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElementValidator.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014, Facebook, Inc.
@@ -10837,7 +10835,7 @@ var ReactElementValidator = {
 module.exports = ReactElementValidator;
 
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactPropTypeLocations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPropTypeLocations.js","./monitorCodeUse":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/monitorCodeUse.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactEmptyComponent.js":[function(require,module,exports){
+},{"./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactPropTypeLocations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPropTypeLocations.js","./monitorCodeUse":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/monitorCodeUse.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactEmptyComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014, Facebook, Inc.
@@ -10914,7 +10912,7 @@ var ReactEmptyComponent = {
 module.exports = ReactEmptyComponent;
 
 }).call(this,require('_process'))
-},{"./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactErrorUtils.js":[function(require,module,exports){
+},{"./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactErrorUtils.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -10946,7 +10944,7 @@ var ReactErrorUtils = {
 
 module.exports = ReactErrorUtils;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactEventEmitterMixin.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactEventEmitterMixin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -10996,7 +10994,7 @@ var ReactEventEmitterMixin = {
 
 module.exports = ReactEventEmitterMixin;
 
-},{"./EventPluginHub":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginHub.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactEventListener.js":[function(require,module,exports){
+},{"./EventPluginHub":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginHub.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactEventListener.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -11180,7 +11178,7 @@ var ReactEventListener = {
 
 module.exports = ReactEventListener;
 
-},{"./EventListener":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventListener.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js","./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/PooledClass.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInstanceHandles.js","./ReactMount":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMount.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactUpdates.js","./getEventTarget":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventTarget.js","./getUnboundedScrollPosition":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getUnboundedScrollPosition.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInjection.js":[function(require,module,exports){
+},{"./EventListener":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventListener.js","./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js","./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/PooledClass.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInstanceHandles.js","./ReactMount":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMount.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactUpdates.js","./getEventTarget":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventTarget.js","./getUnboundedScrollPosition":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getUnboundedScrollPosition.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInjection.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -11220,7 +11218,7 @@ var ReactInjection = {
 
 module.exports = ReactInjection;
 
-},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMProperty.js","./EventPluginHub":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginHub.js","./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactComponent.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCompositeComponent.js","./ReactEmptyComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactEmptyComponent.js","./ReactNativeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactNativeComponent.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPerf.js","./ReactRootIndex":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactRootIndex.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactUpdates.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInputSelection.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMProperty.js","./EventPluginHub":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginHub.js","./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactComponent.js","./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCompositeComponent.js","./ReactEmptyComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactEmptyComponent.js","./ReactNativeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactNativeComponent.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPerf.js","./ReactRootIndex":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactRootIndex.js","./ReactUpdates":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactUpdates.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInputSelection.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -11356,7 +11354,7 @@ var ReactInputSelection = {
 
 module.exports = ReactInputSelection;
 
-},{"./ReactDOMSelection":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactDOMSelection.js","./containsNode":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/containsNode.js","./focusNode":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/focusNode.js","./getActiveElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getActiveElement.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInstanceHandles.js":[function(require,module,exports){
+},{"./ReactDOMSelection":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactDOMSelection.js","./containsNode":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/containsNode.js","./focusNode":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/focusNode.js","./getActiveElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getActiveElement.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInstanceHandles.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -11691,7 +11689,7 @@ var ReactInstanceHandles = {
 module.exports = ReactInstanceHandles;
 
 }).call(this,require('_process'))
-},{"./ReactRootIndex":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactRootIndex.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactLegacyElement.js":[function(require,module,exports){
+},{"./ReactRootIndex":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactRootIndex.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactLegacyElement.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014, Facebook, Inc.
@@ -11938,7 +11936,7 @@ ReactLegacyElementFactory._isLegacyCallWarningEnabled = true;
 module.exports = ReactLegacyElementFactory;
 
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCurrentOwner.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","./monitorCodeUse":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/monitorCodeUse.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMarkupChecksum.js":[function(require,module,exports){
+},{"./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCurrentOwner.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","./monitorCodeUse":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/monitorCodeUse.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMarkupChecksum.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -11986,7 +11984,7 @@ var ReactMarkupChecksum = {
 
 module.exports = ReactMarkupChecksum;
 
-},{"./adler32":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/adler32.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMount.js":[function(require,module,exports){
+},{"./adler32":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/adler32.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMount.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -12684,7 +12682,7 @@ ReactMount.renderComponent = deprecated(
 module.exports = ReactMount;
 
 }).call(this,require('_process'))
-},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMProperty.js","./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInstanceHandles.js","./ReactLegacyElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactLegacyElement.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPerf.js","./containsNode":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/containsNode.js","./deprecated":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/deprecated.js","./getReactRootElementInContainer":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getReactRootElementInContainer.js","./instantiateReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/instantiateReactComponent.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","./shouldUpdateReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/shouldUpdateReactComponent.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMultiChild.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMProperty.js","./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInstanceHandles.js","./ReactLegacyElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactLegacyElement.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPerf.js","./containsNode":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/containsNode.js","./deprecated":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/deprecated.js","./getReactRootElementInContainer":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getReactRootElementInContainer.js","./instantiateReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/instantiateReactComponent.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","./shouldUpdateReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/shouldUpdateReactComponent.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMultiChild.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -13112,7 +13110,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 
-},{"./ReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactComponent.js","./ReactMultiChildUpdateTypes":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMultiChildUpdateTypes.js","./flattenChildren":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/flattenChildren.js","./instantiateReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/instantiateReactComponent.js","./shouldUpdateReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/shouldUpdateReactComponent.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMultiChildUpdateTypes.js":[function(require,module,exports){
+},{"./ReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactComponent.js","./ReactMultiChildUpdateTypes":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMultiChildUpdateTypes.js","./flattenChildren":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/flattenChildren.js","./instantiateReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/instantiateReactComponent.js","./shouldUpdateReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/shouldUpdateReactComponent.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMultiChildUpdateTypes.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -13145,7 +13143,7 @@ var ReactMultiChildUpdateTypes = keyMirror({
 
 module.exports = ReactMultiChildUpdateTypes;
 
-},{"./keyMirror":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyMirror.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactNativeComponent.js":[function(require,module,exports){
+},{"./keyMirror":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyMirror.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactNativeComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014, Facebook, Inc.
@@ -13218,7 +13216,7 @@ var ReactNativeComponent = {
 module.exports = ReactNativeComponent;
 
 }).call(this,require('_process'))
-},{"./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactOwner.js":[function(require,module,exports){
+},{"./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactOwner.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -13374,7 +13372,7 @@ var ReactOwner = {
 module.exports = ReactOwner;
 
 }).call(this,require('_process'))
-},{"./emptyObject":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyObject.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPerf.js":[function(require,module,exports){
+},{"./emptyObject":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyObject.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPerf.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -13458,7 +13456,7 @@ function _noMeasure(objName, fnName, func) {
 module.exports = ReactPerf;
 
 }).call(this,require('_process'))
-},{"_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPropTransferer.js":[function(require,module,exports){
+},{"_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPropTransferer.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -13625,7 +13623,7 @@ var ReactPropTransferer = {
 module.exports = ReactPropTransferer;
 
 }).call(this,require('_process'))
-},{"./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyFunction.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","./joinClasses":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/joinClasses.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPropTypeLocationNames.js":[function(require,module,exports){
+},{"./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyFunction.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","./joinClasses":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/joinClasses.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPropTypeLocationNames.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -13653,7 +13651,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = ReactPropTypeLocationNames;
 
 }).call(this,require('_process'))
-},{"_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPropTypeLocations.js":[function(require,module,exports){
+},{"_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPropTypeLocations.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -13677,7 +13675,7 @@ var ReactPropTypeLocations = keyMirror({
 
 module.exports = ReactPropTypeLocations;
 
-},{"./keyMirror":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyMirror.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPropTypes.js":[function(require,module,exports){
+},{"./keyMirror":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyMirror.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPropTypes.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -14031,7 +14029,7 @@ function getPreciseType(propValue) {
 
 module.exports = ReactPropTypes;
 
-},{"./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactPropTypeLocationNames":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPropTypeLocationNames.js","./deprecated":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/deprecated.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyFunction.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPutListenerQueue.js":[function(require,module,exports){
+},{"./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactPropTypeLocationNames":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPropTypeLocationNames.js","./deprecated":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/deprecated.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyFunction.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPutListenerQueue.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -14087,7 +14085,7 @@ PooledClass.addPoolingTo(ReactPutListenerQueue);
 
 module.exports = ReactPutListenerQueue;
 
-},{"./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/PooledClass.js","./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserEventEmitter.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactReconcileTransaction.js":[function(require,module,exports){
+},{"./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/PooledClass.js","./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserEventEmitter.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactReconcileTransaction.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -14263,7 +14261,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
 
-},{"./CallbackQueue":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/PooledClass.js","./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactInputSelection":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInputSelection.js","./ReactPutListenerQueue":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPutListenerQueue.js","./Transaction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Transaction.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactRootIndex.js":[function(require,module,exports){
+},{"./CallbackQueue":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/PooledClass.js","./ReactBrowserEventEmitter":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactInputSelection":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInputSelection.js","./ReactPutListenerQueue":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPutListenerQueue.js","./Transaction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Transaction.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactRootIndex.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -14294,7 +14292,7 @@ var ReactRootIndex = {
 
 module.exports = ReactRootIndex;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactServerRendering.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactServerRendering.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -14374,7 +14372,7 @@ module.exports = {
 };
 
 }).call(this,require('_process'))
-},{"./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInstanceHandles.js","./ReactMarkupChecksum":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactMarkupChecksum.js","./ReactServerRenderingTransaction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactServerRenderingTransaction.js","./instantiateReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/instantiateReactComponent.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactServerRenderingTransaction.js":[function(require,module,exports){
+},{"./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInstanceHandles.js","./ReactMarkupChecksum":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactMarkupChecksum.js","./ReactServerRenderingTransaction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactServerRenderingTransaction.js","./instantiateReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/instantiateReactComponent.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactServerRenderingTransaction.js":[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -14487,7 +14485,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
 
-},{"./CallbackQueue":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/PooledClass.js","./ReactPutListenerQueue":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPutListenerQueue.js","./Transaction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Transaction.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyFunction.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactTextComponent.js":[function(require,module,exports){
+},{"./CallbackQueue":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/PooledClass.js","./ReactPutListenerQueue":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPutListenerQueue.js","./Transaction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Transaction.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyFunction.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactTextComponent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -14593,7 +14591,7 @@ ReactTextComponentFactory.type = ReactTextComponent;
 
 module.exports = ReactTextComponentFactory;
 
-},{"./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMPropertyOperations.js","./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./ReactComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactComponent.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./escapeTextForBrowser":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/escapeTextForBrowser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactUpdates.js":[function(require,module,exports){
+},{"./DOMPropertyOperations":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMPropertyOperations.js","./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./ReactComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactComponent.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./escapeTextForBrowser":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/escapeTextForBrowser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactUpdates.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -14883,7 +14881,7 @@ var ReactUpdates = {
 module.exports = ReactUpdates;
 
 }).call(this,require('_process'))
-},{"./CallbackQueue":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/PooledClass.js","./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCurrentOwner.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactPerf.js","./Transaction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Transaction.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SVGDOMPropertyConfig.js":[function(require,module,exports){
+},{"./CallbackQueue":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/PooledClass.js","./ReactCurrentOwner":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCurrentOwner.js","./ReactPerf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactPerf.js","./Transaction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Transaction.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SVGDOMPropertyConfig.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -14975,7 +14973,7 @@ var SVGDOMPropertyConfig = {
 
 module.exports = SVGDOMPropertyConfig;
 
-},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/DOMProperty.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SelectEventPlugin.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/DOMProperty.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SelectEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15170,7 +15168,7 @@ var SelectEventPlugin = {
 
 module.exports = SelectEventPlugin;
 
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPropagators.js","./ReactInputSelection":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInputSelection.js","./SyntheticEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticEvent.js","./getActiveElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getActiveElement.js","./isTextInputElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/isTextInputElement.js","./keyOf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyOf.js","./shallowEqual":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/shallowEqual.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ServerReactRootIndex.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPropagators.js","./ReactInputSelection":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInputSelection.js","./SyntheticEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticEvent.js","./getActiveElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getActiveElement.js","./isTextInputElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/isTextInputElement.js","./keyOf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyOf.js","./shallowEqual":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/shallowEqual.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ServerReactRootIndex.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15201,7 +15199,7 @@ var ServerReactRootIndex = {
 
 module.exports = ServerReactRootIndex;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SimpleEventPlugin.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SimpleEventPlugin.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -15629,7 +15627,7 @@ var SimpleEventPlugin = {
 module.exports = SimpleEventPlugin;
 
 }).call(this,require('_process'))
-},{"./EventConstants":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventConstants.js","./EventPluginUtils":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPluginUtils.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/EventPropagators.js","./SyntheticClipboardEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticClipboardEvent.js","./SyntheticDragEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticDragEvent.js","./SyntheticEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticEvent.js","./SyntheticFocusEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticFocusEvent.js","./SyntheticKeyboardEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticKeyboardEvent.js","./SyntheticMouseEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticMouseEvent.js","./SyntheticTouchEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticTouchEvent.js","./SyntheticUIEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticUIEvent.js","./SyntheticWheelEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticWheelEvent.js","./getEventCharCode":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventCharCode.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","./keyOf":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyOf.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticClipboardEvent.js":[function(require,module,exports){
+},{"./EventConstants":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventConstants.js","./EventPluginUtils":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPluginUtils.js","./EventPropagators":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/EventPropagators.js","./SyntheticClipboardEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticClipboardEvent.js","./SyntheticDragEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticDragEvent.js","./SyntheticEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticEvent.js","./SyntheticFocusEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticFocusEvent.js","./SyntheticKeyboardEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticKeyboardEvent.js","./SyntheticMouseEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticMouseEvent.js","./SyntheticTouchEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticTouchEvent.js","./SyntheticUIEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticUIEvent.js","./SyntheticWheelEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticWheelEvent.js","./getEventCharCode":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventCharCode.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","./keyOf":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyOf.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticClipboardEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15675,7 +15673,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 
-},{"./SyntheticEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticEvent.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticCompositionEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticEvent.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticCompositionEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15721,7 +15719,7 @@ SyntheticEvent.augmentClass(
 module.exports = SyntheticCompositionEvent;
 
 
-},{"./SyntheticEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticEvent.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticDragEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticEvent.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticDragEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15760,7 +15758,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 
 module.exports = SyntheticDragEvent;
 
-},{"./SyntheticMouseEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticMouseEvent.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticEvent.js":[function(require,module,exports){
+},{"./SyntheticMouseEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticMouseEvent.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15918,7 +15916,7 @@ PooledClass.addPoolingTo(SyntheticEvent, PooledClass.threeArgumentPooler);
 
 module.exports = SyntheticEvent;
 
-},{"./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/PooledClass.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyFunction.js","./getEventTarget":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventTarget.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticFocusEvent.js":[function(require,module,exports){
+},{"./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/PooledClass.js","./emptyFunction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyFunction.js","./getEventTarget":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventTarget.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticFocusEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15957,7 +15955,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 
 module.exports = SyntheticFocusEvent;
 
-},{"./SyntheticUIEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticUIEvent.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticInputEvent.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticUIEvent.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticInputEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013 Facebook, Inc.
  * All rights reserved.
@@ -16004,7 +16002,7 @@ SyntheticEvent.augmentClass(
 module.exports = SyntheticInputEvent;
 
 
-},{"./SyntheticEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticEvent.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticKeyboardEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticEvent.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticKeyboardEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16091,7 +16089,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 
 module.exports = SyntheticKeyboardEvent;
 
-},{"./SyntheticUIEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticUIEvent.js","./getEventCharCode":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventCharCode.js","./getEventKey":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventKey.js","./getEventModifierState":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventModifierState.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticMouseEvent.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticUIEvent.js","./getEventCharCode":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventCharCode.js","./getEventKey":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventKey.js","./getEventModifierState":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventModifierState.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticMouseEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16174,7 +16172,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 
 module.exports = SyntheticMouseEvent;
 
-},{"./SyntheticUIEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticUIEvent.js","./ViewportMetrics":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ViewportMetrics.js","./getEventModifierState":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventModifierState.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticTouchEvent.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticUIEvent.js","./ViewportMetrics":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ViewportMetrics.js","./getEventModifierState":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventModifierState.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticTouchEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16222,7 +16220,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 
 module.exports = SyntheticTouchEvent;
 
-},{"./SyntheticUIEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticUIEvent.js","./getEventModifierState":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventModifierState.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticUIEvent.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticUIEvent.js","./getEventModifierState":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventModifierState.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticUIEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16284,7 +16282,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 
 module.exports = SyntheticUIEvent;
 
-},{"./SyntheticEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticEvent.js","./getEventTarget":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventTarget.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticWheelEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticEvent.js","./getEventTarget":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventTarget.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticWheelEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16345,7 +16343,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 
 module.exports = SyntheticWheelEvent;
 
-},{"./SyntheticMouseEvent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/SyntheticMouseEvent.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Transaction.js":[function(require,module,exports){
+},{"./SyntheticMouseEvent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/SyntheticMouseEvent.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Transaction.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -16586,7 +16584,7 @@ var Transaction = {
 module.exports = Transaction;
 
 }).call(this,require('_process'))
-},{"./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ViewportMetrics.js":[function(require,module,exports){
+},{"./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ViewportMetrics.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16618,7 +16616,7 @@ var ViewportMetrics = {
 
 module.exports = ViewportMetrics;
 
-},{"./getUnboundedScrollPosition":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getUnboundedScrollPosition.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/accumulateInto.js":[function(require,module,exports){
+},{"./getUnboundedScrollPosition":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getUnboundedScrollPosition.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/accumulateInto.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014, Facebook, Inc.
@@ -16684,7 +16682,7 @@ function accumulateInto(current, next) {
 module.exports = accumulateInto;
 
 }).call(this,require('_process'))
-},{"./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/adler32.js":[function(require,module,exports){
+},{"./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/adler32.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16718,7 +16716,7 @@ function adler32(data) {
 
 module.exports = adler32;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/camelize.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/camelize.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16750,7 +16748,7 @@ function camelize(string) {
 
 module.exports = camelize;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/camelizeStyleName.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/camelizeStyleName.js":[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -16792,7 +16790,7 @@ function camelizeStyleName(string) {
 
 module.exports = camelizeStyleName;
 
-},{"./camelize":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/camelize.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/containsNode.js":[function(require,module,exports){
+},{"./camelize":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/camelize.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/containsNode.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16836,7 +16834,7 @@ function containsNode(outerNode, innerNode) {
 
 module.exports = containsNode;
 
-},{"./isTextNode":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/isTextNode.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/createArrayFrom.js":[function(require,module,exports){
+},{"./isTextNode":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/isTextNode.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/createArrayFrom.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16922,7 +16920,7 @@ function createArrayFrom(obj) {
 
 module.exports = createArrayFrom;
 
-},{"./toArray":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/toArray.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/createFullPageComponent.js":[function(require,module,exports){
+},{"./toArray":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/toArray.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/createFullPageComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -16983,7 +16981,7 @@ function createFullPageComponent(tag) {
 module.exports = createFullPageComponent;
 
 }).call(this,require('_process'))
-},{"./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactCompositeComponent.js","./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/createNodesFromMarkup.js":[function(require,module,exports){
+},{"./ReactCompositeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactCompositeComponent.js","./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/createNodesFromMarkup.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -17073,7 +17071,7 @@ function createNodesFromMarkup(markup, handleScript) {
 module.exports = createNodesFromMarkup;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js","./createArrayFrom":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/createArrayFrom.js","./getMarkupWrap":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getMarkupWrap.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/dangerousStyleValue.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js","./createArrayFrom":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/createArrayFrom.js","./getMarkupWrap":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getMarkupWrap.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/dangerousStyleValue.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17131,7 +17129,7 @@ function dangerousStyleValue(name, value) {
 
 module.exports = dangerousStyleValue;
 
-},{"./CSSProperty":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/CSSProperty.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/deprecated.js":[function(require,module,exports){
+},{"./CSSProperty":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/CSSProperty.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/deprecated.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -17182,7 +17180,7 @@ function deprecated(namespace, oldName, newName, ctx, fn) {
 module.exports = deprecated;
 
 }).call(this,require('_process'))
-},{"./Object.assign":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/Object.assign.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyFunction.js":[function(require,module,exports){
+},{"./Object.assign":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/Object.assign.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyFunction.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17216,7 +17214,7 @@ emptyFunction.thatReturnsArgument = function(arg) { return arg; };
 
 module.exports = emptyFunction;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyObject.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyObject.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -17240,7 +17238,7 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = emptyObject;
 
 }).call(this,require('_process'))
-},{"_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/escapeTextForBrowser.js":[function(require,module,exports){
+},{"_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/escapeTextForBrowser.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17281,7 +17279,7 @@ function escapeTextForBrowser(text) {
 
 module.exports = escapeTextForBrowser;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/flattenChildren.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/flattenChildren.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -17350,7 +17348,7 @@ function flattenChildren(children) {
 module.exports = flattenChildren;
 
 }).call(this,require('_process'))
-},{"./ReactTextComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactTextComponent.js","./traverseAllChildren":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/traverseAllChildren.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/focusNode.js":[function(require,module,exports){
+},{"./ReactTextComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactTextComponent.js","./traverseAllChildren":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/traverseAllChildren.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/focusNode.js":[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -17379,7 +17377,7 @@ function focusNode(node) {
 
 module.exports = focusNode;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/forEachAccumulated.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/forEachAccumulated.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17410,7 +17408,7 @@ var forEachAccumulated = function(arr, cb, scope) {
 
 module.exports = forEachAccumulated;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getActiveElement.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getActiveElement.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17439,7 +17437,7 @@ function getActiveElement() /*?DOMElement*/ {
 
 module.exports = getActiveElement;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventCharCode.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventCharCode.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17491,7 +17489,7 @@ function getEventCharCode(nativeEvent) {
 
 module.exports = getEventCharCode;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventKey.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventKey.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17596,7 +17594,7 @@ function getEventKey(nativeEvent) {
 
 module.exports = getEventKey;
 
-},{"./getEventCharCode":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventCharCode.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventModifierState.js":[function(require,module,exports){
+},{"./getEventCharCode":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventCharCode.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventModifierState.js":[function(require,module,exports){
 /**
  * Copyright 2013 Facebook, Inc.
  * All rights reserved.
@@ -17643,7 +17641,7 @@ function getEventModifierState(nativeEvent) {
 
 module.exports = getEventModifierState;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getEventTarget.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getEventTarget.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17674,7 +17672,7 @@ function getEventTarget(nativeEvent) {
 
 module.exports = getEventTarget;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getMarkupWrap.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getMarkupWrap.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -17791,7 +17789,7 @@ function getMarkupWrap(nodeName) {
 module.exports = getMarkupWrap;
 
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getNodeForCharacterOffset.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getNodeForCharacterOffset.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17866,7 +17864,7 @@ function getNodeForCharacterOffset(root, offset) {
 
 module.exports = getNodeForCharacterOffset;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getReactRootElementInContainer.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getReactRootElementInContainer.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17901,7 +17899,7 @@ function getReactRootElementInContainer(container) {
 
 module.exports = getReactRootElementInContainer;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getTextContentAccessor.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getTextContentAccessor.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17938,7 +17936,7 @@ function getTextContentAccessor() {
 
 module.exports = getTextContentAccessor;
 
-},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/getUnboundedScrollPosition.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/getUnboundedScrollPosition.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17978,7 +17976,7 @@ function getUnboundedScrollPosition(scrollable) {
 
 module.exports = getUnboundedScrollPosition;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/hyphenate.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/hyphenate.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18011,7 +18009,7 @@ function hyphenate(string) {
 
 module.exports = hyphenate;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/hyphenateStyleName.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/hyphenateStyleName.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18052,7 +18050,7 @@ function hyphenateStyleName(string) {
 
 module.exports = hyphenateStyleName;
 
-},{"./hyphenate":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/hyphenate.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/instantiateReactComponent.js":[function(require,module,exports){
+},{"./hyphenate":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/hyphenate.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/instantiateReactComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -18166,7 +18164,7 @@ function instantiateReactComponent(element, parentCompositeType) {
 module.exports = instantiateReactComponent;
 
 }).call(this,require('_process'))
-},{"./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactEmptyComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactEmptyComponent.js","./ReactLegacyElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactLegacyElement.js","./ReactNativeComponent":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactNativeComponent.js","./warning":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js":[function(require,module,exports){
+},{"./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactEmptyComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactEmptyComponent.js","./ReactLegacyElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactLegacyElement.js","./ReactNativeComponent":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactNativeComponent.js","./warning":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -18223,7 +18221,7 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 }).call(this,require('_process'))
-},{"_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/isEventSupported.js":[function(require,module,exports){
+},{"_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/isEventSupported.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18288,7 +18286,7 @@ function isEventSupported(eventNameSuffix, capture) {
 
 module.exports = isEventSupported;
 
-},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/isNode.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/isNode.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18316,7 +18314,7 @@ function isNode(object) {
 
 module.exports = isNode;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/isTextInputElement.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/isTextInputElement.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18360,7 +18358,7 @@ function isTextInputElement(elem) {
 
 module.exports = isTextInputElement;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/isTextNode.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/isTextNode.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18385,7 +18383,7 @@ function isTextNode(object) {
 
 module.exports = isTextNode;
 
-},{"./isNode":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/isNode.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/joinClasses.js":[function(require,module,exports){
+},{"./isNode":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/isNode.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/joinClasses.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18426,7 +18424,7 @@ function joinClasses(className/*, ... */) {
 
 module.exports = joinClasses;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyMirror.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyMirror.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -18481,7 +18479,7 @@ var keyMirror = function(obj) {
 module.exports = keyMirror;
 
 }).call(this,require('_process'))
-},{"./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/keyOf.js":[function(require,module,exports){
+},{"./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/keyOf.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18517,7 +18515,7 @@ var keyOf = function(oneKeyObj) {
 
 module.exports = keyOf;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/mapObject.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/mapObject.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18570,7 +18568,7 @@ function mapObject(object, callback, context) {
 
 module.exports = mapObject;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/memoizeStringOnly.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/memoizeStringOnly.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18604,7 +18602,7 @@ function memoizeStringOnly(callback) {
 
 module.exports = memoizeStringOnly;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/monitorCodeUse.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/monitorCodeUse.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014, Facebook, Inc.
@@ -18638,7 +18636,7 @@ function monitorCodeUse(eventName, data) {
 module.exports = monitorCodeUse;
 
 }).call(this,require('_process'))
-},{"./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/onlyChild.js":[function(require,module,exports){
+},{"./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/onlyChild.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -18678,7 +18676,7 @@ function onlyChild(children) {
 module.exports = onlyChild;
 
 }).call(this,require('_process'))
-},{"./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/performance.js":[function(require,module,exports){
+},{"./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/performance.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18706,7 +18704,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = performance || {};
 
-},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/performanceNow.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/performanceNow.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18734,7 +18732,7 @@ var performanceNow = performance.now.bind(performance);
 
 module.exports = performanceNow;
 
-},{"./performance":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/performance.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/setInnerHTML.js":[function(require,module,exports){
+},{"./performance":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/performance.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/setInnerHTML.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18812,7 +18810,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = setInnerHTML;
 
-},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/shallowEqual.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/shallowEqual.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18856,7 +18854,7 @@ function shallowEqual(objA, objB) {
 
 module.exports = shallowEqual;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/shouldUpdateReactComponent.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/shouldUpdateReactComponent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18894,7 +18892,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 
 module.exports = shouldUpdateReactComponent;
 
-},{}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/toArray.js":[function(require,module,exports){
+},{}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/toArray.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014, Facebook, Inc.
@@ -18966,7 +18964,7 @@ function toArray(obj) {
 module.exports = toArray;
 
 }).call(this,require('_process'))
-},{"./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/traverseAllChildren.js":[function(require,module,exports){
+},{"./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/traverseAllChildren.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -19149,7 +19147,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 module.exports = traverseAllChildren;
 
 }).call(this,require('_process'))
-},{"./ReactElement":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactElement.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/ReactInstanceHandles.js","./invariant":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/warning.js":[function(require,module,exports){
+},{"./ReactElement":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactElement.js","./ReactInstanceHandles":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/ReactInstanceHandles.js","./invariant":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/invariant.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/warning.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014, Facebook, Inc.
@@ -19194,10 +19192,10 @@ if ("production" !== process.env.NODE_ENV) {
 module.exports = warning;
 
 }).call(this,require('_process'))
-},{"./emptyFunction":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/emptyFunction.js","_process":"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/react/react.js":[function(require,module,exports){
+},{"./emptyFunction":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/emptyFunction.js","_process":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/react.js":[function(require,module,exports){
 module.exports = require('./lib/React');
 
-},{"./lib/React":"/home/juancarlos/Github/guitar-hero/node_modules/react/lib/React.js"}],"/home/juancarlos/Github/guitar-hero/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js":[function(require,module,exports){
+},{"./lib/React":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/lib/React.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/watchify/node_modules/browserify/node_modules/process/browser.js":[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -19285,4 +19283,4 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}]},{},["/home/juancarlos/Github/guitar-hero/app.coffee"]);
+},{}]},{},["/home/juancarlos/Github/guitar-hero-firefox-os/app.coffee"]);

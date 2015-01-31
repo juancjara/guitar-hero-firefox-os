@@ -12,10 +12,8 @@ initData = (value) ->
 
 checkFirstTime = (value) ->
   if value
-    console.log 'hay'
     initialize()
   else
-    console.log 'no hay'
     localforage.clear () ->
       localforage.setItem('firstTime', 'done').then initData
   return
