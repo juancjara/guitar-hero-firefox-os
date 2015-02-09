@@ -3,71 +3,1524 @@ var data, levelsDB;
 
 data = [
   {
-    'title': 'Otherside',
-    'path': 'music/otherside.ogg',
-    'easy': {
-      'height': 50,
-      'notes': [
-        {
-          x: 44,
-          y: 0
-        }, {
-          x: 38,
-          y: 1
-        }, {
-          x: 35,
-          y: 1
-        }, {
-          x: 30,
-          y: 1
-        }, {
-          x: 40,
-          y: 3
-        }
-      ]
-    },
-    'medium': {
-      'height': 50,
-      'notes': [
-        {
-          x: 38,
-          y: 0
-        }, {
-          x: 30,
-          y: 1
-        }, {
-          x: 40,
-          y: 3
-        }
-      ]
-    }
+    'title': 'happyrock',
+    'path': 'music/happyrock.ogg',
+    'level': 'easy',
+    'height': 160,
+    'notes': [
+      {
+        x: 4,
+        y: 2
+      }, {
+        x: 7,
+        y: 0
+      }, {
+        x: 13,
+        y: 0
+      }, {
+        x: 15,
+        y: 2
+      }, {
+        x: 21,
+        y: 0
+      }, {
+        x: 24,
+        y: 2
+      }, {
+        x: 28,
+        y: 3
+      }, {
+        x: 32,
+        y: 2
+      }, {
+        x: 36,
+        y: 4
+      }, {
+        x: 41,
+        y: 2
+      }, {
+        x: 45,
+        y: 3
+      }, {
+        x: 47,
+        y: 3
+      }, {
+        x: 52,
+        y: 2
+      }, {
+        x: 56,
+        y: 0
+      }, {
+        x: 59,
+        y: 3
+      }, {
+        x: 64,
+        y: 0
+      }, {
+        x: 66,
+        y: 1
+      }, {
+        x: 70,
+        y: 2
+      }, {
+        x: 75,
+        y: 1
+      }, {
+        x: 78,
+        y: 0
+      }, {
+        x: 80,
+        y: 1
+      }, {
+        x: 83,
+        y: 0
+      }, {
+        x: 85,
+        y: 1
+      }, {
+        x: 91,
+        y: 2
+      }, {
+        x: 95,
+        y: 2
+      }, {
+        x: 97,
+        y: 0
+      }, {
+        x: 101,
+        y: 2
+      }, {
+        x: 103,
+        y: 3
+      }, {
+        x: 105,
+        y: 0
+      }, {
+        x: 107,
+        y: 1
+      }, {
+        x: 109,
+        y: 3
+      }, {
+        x: 110,
+        y: 2
+      }, {
+        x: 112,
+        y: 3
+      }, {
+        x: 116,
+        y: 0
+      }, {
+        x: 120,
+        y: 0
+      }, {
+        x: 122,
+        y: 1
+      }, {
+        x: 124,
+        y: 2
+      }, {
+        x: 128,
+        y: 2
+      }, {
+        x: 130,
+        y: 3
+      }, {
+        x: 132,
+        y: 0
+      }, {
+        x: 134,
+        y: 2
+      }, {
+        x: 135,
+        y: 1
+      }, {
+        x: 138,
+        y: 3
+      }, {
+        x: 140,
+        y: 2
+      }, {
+        x: 141,
+        y: 4
+      }, {
+        x: 143,
+        y: 1
+      }, {
+        x: 146,
+        y: 2
+      }, {
+        x: 148,
+        y: 2
+      }, {
+        x: 153,
+        y: 2
+      }
+    ]
   }, {
-    'title': 'another',
-    'path': 'music/another.ogg',
-    'easy': {
-      'height': 10,
-      'notes': [
-        {
-          x: 5,
-          y: 0
-        }
-      ]
-    },
-    'medium': {
-      'height': 50,
-      'notes': [
-        {
-          x: 38,
-          y: 0
-        }, {
-          x: 30,
-          y: 1
-        }, {
-          x: 40,
-          y: 3
-        }
-      ]
-    }
+    'title': 'bossanova',
+    'path': 'music/bossanova.ogg',
+    'level': 'easy',
+    'height': 160,
+    'notes': [
+      {
+        x: 2,
+        y: 1
+      }, {
+        x: 5,
+        y: 3
+      }, {
+        x: 6,
+        y: 2
+      }, {
+        x: 7,
+        y: 3
+      }, {
+        x: 11,
+        y: 2
+      }, {
+        x: 13,
+        y: 1
+      }, {
+        x: 15,
+        y: 3
+      }, {
+        x: 22,
+        y: 2
+      }, {
+        x: 23,
+        y: 2
+      }, {
+        x: 25,
+        y: 0
+      }, {
+        x: 28,
+        y: 3
+      }, {
+        x: 30,
+        y: 1
+      }, {
+        x: 33,
+        y: 0
+      }, {
+        x: 35,
+        y: 3
+      }, {
+        x: 39,
+        y: 4
+      }, {
+        x: 44,
+        y: 2
+      }, {
+        x: 46,
+        y: 0
+      }, {
+        x: 52,
+        y: 0
+      }, {
+        x: 54,
+        y: 1
+      }, {
+        x: 56,
+        y: 0
+      }, {
+        x: 58,
+        y: 1
+      }, {
+        x: 64,
+        y: 0
+      }, {
+        x: 67,
+        y: 2
+      }, {
+        x: 71,
+        y: 3
+      }, {
+        x: 74,
+        y: 4
+      }, {
+        x: 77,
+        y: 0
+      }, {
+        x: 80,
+        y: 2
+      }, {
+        x: 82,
+        y: 1
+      }, {
+        x: 84,
+        y: 2
+      }, {
+        x: 85,
+        y: 3
+      }, {
+        x: 89,
+        y: 1
+      }, {
+        x: 95,
+        y: 2
+      }, {
+        x: 101,
+        y: 0
+      }, {
+        x: 103,
+        y: 1
+      }, {
+        x: 104,
+        y: 0
+      }, {
+        x: 106,
+        y: 1
+      }, {
+        x: 107,
+        y: 2
+      }, {
+        x: 109,
+        y: 3
+      }, {
+        x: 112,
+        y: 2
+      }, {
+        x: 122,
+        y: 3
+      }, {
+        x: 125,
+        y: 2
+      }, {
+        x: 126,
+        y: 3
+      }, {
+        x: 129,
+        y: 1
+      }, {
+        x: 132,
+        y: 2
+      }, {
+        x: 137,
+        y: 0
+      }, {
+        x: 140,
+        y: 2
+      }, {
+        x: 143,
+        y: 3
+      }, {
+        x: 145,
+        y: 2
+      }, {
+        x: 151,
+        y: 3
+      }, {
+        x: 154,
+        y: 1
+      }, {
+        x: 158,
+        y: 1
+      }
+    ]
+  }, {
+    'title': 'dubstep',
+    'path': 'music/dubstep.ogg',
+    'level': 'easy',
+    'height': 220,
+    'notes': [
+      {
+        x: 1,
+        y: 2
+      }, {
+        x: 6,
+        y: 0
+      }, {
+        x: 9,
+        y: 1
+      }, {
+        x: 12,
+        y: 0
+      }, {
+        x: 14,
+        y: 2
+      }, {
+        x: 22,
+        y: 2
+      }, {
+        x: 31,
+        y: 3
+      }, {
+        x: 34,
+        y: 2
+      }, {
+        x: 41,
+        y: 2
+      }, {
+        x: 50,
+        y: 3
+      }, {
+        x: 55,
+        y: 1
+      }, {
+        x: 60,
+        y: 0
+      }, {
+        x: 63,
+        y: 1
+      }, {
+        x: 66,
+        y: 0
+      }, {
+        x: 69,
+        y: 2
+      }, {
+        x: 72,
+        y: 1
+      }, {
+        x: 77,
+        y: 2
+      }, {
+        x: 80,
+        y: 3
+      }, {
+        x: 85,
+        y: 1
+      }, {
+        x: 88,
+        y: 0
+      }, {
+        x: 93,
+        y: 2
+      }, {
+        x: 99,
+        y: 1
+      }, {
+        x: 104,
+        y: 0
+      }, {
+        x: 109,
+        y: 2
+      }, {
+        x: 114,
+        y: 0
+      }, {
+        x: 125,
+        y: 1
+      }, {
+        x: 134,
+        y: 1
+      }, {
+        x: 139,
+        y: 2
+      }, {
+        x: 144,
+        y: 3
+      }, {
+        x: 147,
+        y: 2
+      }, {
+        x: 149,
+        y: 1
+      }, {
+        x: 159,
+        y: 1
+      }, {
+        x: 163,
+        y: 2
+      }, {
+        x: 172,
+        y: 2
+      }, {
+        x: 175,
+        y: 0
+      }, {
+        x: 180,
+        y: 1
+      }, {
+        x: 188,
+        y: 2
+      }, {
+        x: 194,
+        y: 2
+      }, {
+        x: 198,
+        y: 1
+      }, {
+        x: 202,
+        y: 0
+      }
+    ]
+  }, {
+    'title': 'cute',
+    'path': 'music/cute.ogg',
+    'level': 'easy',
+    'height': 220,
+    'notes': [
+      {
+        x: 3,
+        y: 2
+      }, {
+        x: 6,
+        y: 3
+      }, {
+        x: 7,
+        y: 1
+      }, {
+        x: 12,
+        y: 3
+      }, {
+        x: 18,
+        y: 2
+      }, {
+        x: 24,
+        y: 3
+      }, {
+        x: 30,
+        y: 1
+      }, {
+        x: 37,
+        y: 0
+      }, {
+        x: 41,
+        y: 1
+      }, {
+        x: 42,
+        y: 2
+      }, {
+        x: 53,
+        y: 0
+      }, {
+        x: 54,
+        y: 2
+      }, {
+        x: 57,
+        y: 1
+      }, {
+        x: 61,
+        y: 2
+      }, {
+        x: 63,
+        y: 3
+      }, {
+        x: 67,
+        y: 2
+      }, {
+        x: 72,
+        y: 3
+      }, {
+        x: 79,
+        y: 1
+      }, {
+        x: 91,
+        y: 3
+      }, {
+        x: 93,
+        y: 2
+      }, {
+        x: 94,
+        y: 1
+      }, {
+        x: 95,
+        y: 0
+      }, {
+        x: 107,
+        y: 2
+      }, {
+        x: 110,
+        y: 1
+      }, {
+        x: 112,
+        y: 0
+      }, {
+        x: 115,
+        y: 1
+      }, {
+        x: 117,
+        y: 2
+      }, {
+        x: 123,
+        y: 0
+      }, {
+        x: 124,
+        y: 2
+      }, {
+        x: 133,
+        y: 1
+      }, {
+        x: 134,
+        y: 2
+      }, {
+        x: 136,
+        y: 3
+      }, {
+        x: 137,
+        y: 2
+      }, {
+        x: 138,
+        y: 1
+      }, {
+        x: 149,
+        y: 2
+      }, {
+        x: 158,
+        y: 2
+      }, {
+        x: 159,
+        y: 1
+      }, {
+        x: 164,
+        y: 0
+      }, {
+        x: 169,
+        y: 0
+      }, {
+        x: 174,
+        y: 0
+      }, {
+        x: 179,
+        y: 0
+      }, {
+        x: 184,
+        y: 0
+      }, {
+        x: 189,
+        y: 0
+      }, {
+        x: 194,
+        y: 0
+      }, {
+        x: 199,
+        y: 0
+      }, {
+        x: 204,
+        y: 0
+      }, {
+        x: 209,
+        y: 0
+      }, {
+        x: 214,
+        y: 0
+      }
+    ]
+  }, {
+    'title': 'happyrock',
+    'path': 'music/happyrock.ogg',
+    'level': 'medium',
+    'height': 160,
+    'notes': [
+      {
+        x: 4,
+        y: 2
+      }, {
+        x: 7,
+        y: 0
+      }, {
+        x: 10,
+        y: 3
+      }, {
+        x: 13,
+        y: 0
+      }, {
+        x: 15,
+        y: 2
+      }, {
+        x: 19,
+        y: 3
+      }, {
+        x: 21,
+        y: 0
+      }, {
+        x: 24,
+        y: 2
+      }, {
+        x: 26,
+        y: 4
+      }, {
+        x: 28,
+        y: 3
+      }, {
+        x: 32,
+        y: 2
+      }, {
+        x: 34,
+        y: 1
+      }, {
+        x: 36,
+        y: 4
+      }, {
+        x: 39,
+        y: 3
+      }, {
+        x: 41,
+        y: 2
+      }, {
+        x: 45,
+        y: 3
+      }, {
+        x: 46,
+        y: 4
+      }, {
+        x: 47,
+        y: 3
+      }, {
+        x: 52,
+        y: 2
+      }, {
+        x: 56,
+        y: 0
+      }, {
+        x: 59,
+        y: 3
+      }, {
+        x: 62,
+        y: 2
+      }, {
+        x: 64,
+        y: 0
+      }, {
+        x: 66,
+        y: 1
+      }, {
+        x: 70,
+        y: 2
+      }, {
+        x: 73,
+        y: 3
+      }, {
+        x: 75,
+        y: 1
+      }, {
+        x: 78,
+        y: 0
+      }, {
+        x: 80,
+        y: 1
+      }, {
+        x: 83,
+        y: 0
+      }, {
+        x: 85,
+        y: 1
+      }, {
+        x: 88,
+        y: 3
+      }, {
+        x: 91,
+        y: 2
+      }, {
+        x: 92,
+        y: 3
+      }, {
+        x: 95,
+        y: 2
+      }, {
+        x: 97,
+        y: 0
+      }, {
+        x: 99,
+        y: 4
+      }, {
+        x: 101,
+        y: 2
+      }, {
+        x: 103,
+        y: 3
+      }, {
+        x: 105,
+        y: 0
+      }, {
+        x: 107,
+        y: 1
+      }, {
+        x: 109,
+        y: 3
+      }, {
+        x: 110,
+        y: 2
+      }, {
+        x: 112,
+        y: 3
+      }, {
+        x: 114,
+        y: 4
+      }, {
+        x: 116,
+        y: 0
+      }, {
+        x: 118,
+        y: 3
+      }, {
+        x: 120,
+        y: 0
+      }, {
+        x: 122,
+        y: 1
+      }, {
+        x: 124,
+        y: 2
+      }, {
+        x: 126,
+        y: 3
+      }, {
+        x: 128,
+        y: 2
+      }, {
+        x: 130,
+        y: 3
+      }, {
+        x: 132,
+        y: 0
+      }, {
+        x: 134,
+        y: 2
+      }, {
+        x: 135,
+        y: 1
+      }, {
+        x: 138,
+        y: 3
+      }, {
+        x: 140,
+        y: 2
+      }, {
+        x: 141,
+        y: 4
+      }, {
+        x: 143,
+        y: 1
+      }, {
+        x: 145,
+        y: 3
+      }, {
+        x: 146,
+        y: 2
+      }, {
+        x: 147,
+        y: 0
+      }, {
+        x: 148,
+        y: 2
+      }, {
+        x: 149,
+        y: 3
+      }, {
+        x: 150,
+        y: 4
+      }, {
+        x: 152,
+        y: 1
+      }, {
+        x: 153,
+        y: 2
+      }, {
+        x: 155,
+        y: 3
+      }, {
+        x: 156,
+        y: 2
+      }
+    ]
+  }, {
+    'title': 'bossanova',
+    'path': 'music/bossanova.ogg',
+    'level': 'medium',
+    'height': 160,
+    'notes': [
+      {
+        x: 1,
+        y: 1
+      }, {
+        x: 2,
+        y: 1
+      }, {
+        x: 5,
+        y: 3
+      }, {
+        x: 6,
+        y: 2
+      }, {
+        x: 7,
+        y: 3
+      }, {
+        x: 9,
+        y: 4
+      }, {
+        x: 11,
+        y: 2
+      }, {
+        x: 12,
+        y: 3
+      }, {
+        x: 13,
+        y: 1
+      }, {
+        x: 15,
+        y: 3
+      }, {
+        x: 17,
+        y: 4
+      }, {
+        x: 22,
+        y: 2
+      }, {
+        x: 23,
+        y: 2
+      }, {
+        x: 25,
+        y: 0
+      }, {
+        x: 28,
+        y: 3
+      }, {
+        x: 29,
+        y: 4
+      }, {
+        x: 30,
+        y: 1
+      }, {
+        x: 31,
+        y: 2
+      }, {
+        x: 33,
+        y: 0
+      }, {
+        x: 35,
+        y: 3
+      }, {
+        x: 36,
+        y: 0
+      }, {
+        x: 39,
+        y: 4
+      }, {
+        x: 44,
+        y: 2
+      }, {
+        x: 46,
+        y: 0
+      }, {
+        x: 49,
+        y: 3
+      }, {
+        x: 52,
+        y: 0
+      }, {
+        x: 54,
+        y: 1
+      }, {
+        x: 56,
+        y: 0
+      }, {
+        x: 58,
+        y: 1
+      }, {
+        x: 64,
+        y: 0
+      }, {
+        x: 67,
+        y: 2
+      }, {
+        x: 71,
+        y: 3
+      }, {
+        x: 72,
+        y: 2
+      }, {
+        x: 74,
+        y: 4
+      }, {
+        x: 77,
+        y: 0
+      }, {
+        x: 78,
+        y: 3
+      }, {
+        x: 80,
+        y: 2
+      }, {
+        x: 81,
+        y: 3
+      }, {
+        x: 82,
+        y: 1
+      }, {
+        x: 84,
+        y: 2
+      }, {
+        x: 85,
+        y: 3
+      }, {
+        x: 89,
+        y: 1
+      }, {
+        x: 95,
+        y: 2
+      }, {
+        x: 96,
+        y: 3
+      }, {
+        x: 98,
+        y: 4
+      }, {
+        x: 101,
+        y: 0
+      }, {
+        x: 103,
+        y: 1
+      }, {
+        x: 104,
+        y: 0
+      }, {
+        x: 106,
+        y: 1
+      }, {
+        x: 107,
+        y: 2
+      }, {
+        x: 109,
+        y: 3
+      }, {
+        x: 112,
+        y: 2
+      }, {
+        x: 119,
+        y: 4
+      }, {
+        x: 122,
+        y: 3
+      }, {
+        x: 125,
+        y: 2
+      }, {
+        x: 126,
+        y: 3
+      }, {
+        x: 128,
+        y: 0
+      }, {
+        x: 129,
+        y: 1
+      }, {
+        x: 132,
+        y: 2
+      }, {
+        x: 133,
+        y: 3
+      }, {
+        x: 134,
+        y: 4
+      }, {
+        x: 137,
+        y: 0
+      }, {
+        x: 140,
+        y: 2
+      }, {
+        x: 142,
+        y: 1
+      }, {
+        x: 143,
+        y: 3
+      }, {
+        x: 145,
+        y: 2
+      }, {
+        x: 148,
+        y: 4
+      }, {
+        x: 151,
+        y: 3
+      }, {
+        x: 152,
+        y: 3
+      }, {
+        x: 154,
+        y: 1
+      }, {
+        x: 158,
+        y: 1
+      }
+    ]
+  }, {
+    'title': 'dubstep',
+    'path': 'music/dubstep.ogg',
+    'level': 'medium',
+    'height': 220,
+    'notes': [
+      {
+        x: 1,
+        y: 2
+      }, {
+        x: 6,
+        y: 0
+      }, {
+        x: 9,
+        y: 1
+      }, {
+        x: 12,
+        y: 0
+      }, {
+        x: 14,
+        y: 2
+      }, {
+        x: 17,
+        y: 4
+      }, {
+        x: 22,
+        y: 2
+      }, {
+        x: 28,
+        y: 3
+      }, {
+        x: 31,
+        y: 1
+      }, {
+        x: 34,
+        y: 2
+      }, {
+        x: 36,
+        y: 4
+      }, {
+        x: 41,
+        y: 2
+      }, {
+        x: 44,
+        y: 4
+      }, {
+        x: 50,
+        y: 0
+      }, {
+        x: 53,
+        y: 3
+      }, {
+        x: 55,
+        y: 1
+      }, {
+        x: 60,
+        y: 0
+      }, {
+        x: 63,
+        y: 1
+      }, {
+        x: 66,
+        y: 0
+      }, {
+        x: 69,
+        y: 2
+      }, {
+        x: 72,
+        y: 1
+      }, {
+        x: 74,
+        y: 3
+      }, {
+        x: 77,
+        y: 2
+      }, {
+        x: 80,
+        y: 3
+      }, {
+        x: 82,
+        y: 4
+      }, {
+        x: 85,
+        y: 1
+      }, {
+        x: 88,
+        y: 0
+      }, {
+        x: 90,
+        y: 3
+      }, {
+        x: 93,
+        y: 2
+      }, {
+        x: 99,
+        y: 1
+      }, {
+        x: 104,
+        y: 0
+      }, {
+        x: 109,
+        y: 2
+      }, {
+        x: 114,
+        y: 0
+      }, {
+        x: 116,
+        y: 4
+      }, {
+        x: 121,
+        y: 3
+      }, {
+        x: 125,
+        y: 1
+      }, {
+        x: 130,
+        y: 2
+      }, {
+        x: 134,
+        y: 1
+      }, {
+        x: 139,
+        y: 2
+      }, {
+        x: 144,
+        y: 3
+      }, {
+        x: 147,
+        y: 2
+      }, {
+        x: 149,
+        y: 1
+      }, {
+        x: 151,
+        y: 3
+      }, {
+        x: 153,
+        y: 4
+      }, {
+        x: 159,
+        y: 1
+      }, {
+        x: 163,
+        y: 2
+      }, {
+        x: 168,
+        y: 3
+      }, {
+        x: 172,
+        y: 2
+      }, {
+        x: 175,
+        y: 0
+      }, {
+        x: 180,
+        y: 1
+      }, {
+        x: 185,
+        y: 3
+      }, {
+        x: 188,
+        y: 2
+      }, {
+        x: 191,
+        y: 4
+      }, {
+        x: 194,
+        y: 2
+      }, {
+        x: 198,
+        y: 1
+      }, {
+        x: 202,
+        y: 0
+      }
+    ]
+  }, {
+    'title': 'cute',
+    'path': 'music/cute.ogg',
+    'level': 'medium',
+    'height': 220,
+    'notes': [
+      {
+        x: 3,
+        y: 2
+      }, {
+        x: 6,
+        y: 3
+      }, {
+        x: 7,
+        y: 1
+      }, {
+        x: 11,
+        y: 4
+      }, {
+        x: 12,
+        y: 3
+      }, {
+        x: 18,
+        y: 2
+      }, {
+        x: 24,
+        y: 3
+      }, {
+        x: 30,
+        y: 1
+      }, {
+        x: 37,
+        y: 0
+      }, {
+        x: 41,
+        y: 1
+      }, {
+        x: 42,
+        y: 2
+      }, {
+        x: 43,
+        y: 3
+      }, {
+        x: 46,
+        y: 4
+      }, {
+        x: 48,
+        y: 3
+      }, {
+        x: 53,
+        y: 0
+      }, {
+        x: 54,
+        y: 2
+      }, {
+        x: 57,
+        y: 1
+      }, {
+        x: 61,
+        y: 2
+      }, {
+        x: 63,
+        y: 3
+      }, {
+        x: 65,
+        y: 4
+      }, {
+        x: 67,
+        y: 2
+      }, {
+        x: 72,
+        y: 3
+      }, {
+        x: 79,
+        y: 1
+      }, {
+        x: 80,
+        y: 2
+      }, {
+        x: 85,
+        y: 4
+      }, {
+        x: 91,
+        y: 3
+      }, {
+        x: 93,
+        y: 2
+      }, {
+        x: 94,
+        y: 1
+      }, {
+        x: 95,
+        y: 0
+      }, {
+        x: 102,
+        y: 3
+      }, {
+        x: 107,
+        y: 2
+      }, {
+        x: 110,
+        y: 1
+      }, {
+        x: 112,
+        y: 0
+      }, {
+        x: 114,
+        y: 4
+      }, {
+        x: 115,
+        y: 1
+      }, {
+        x: 117,
+        y: 2
+      }, {
+        x: 120,
+        y: 4
+      }, {
+        x: 123,
+        y: 0
+      }, {
+        x: 124,
+        y: 2
+      }, {
+        x: 126,
+        y: 3
+      }, {
+        x: 128,
+        y: 2
+      }, {
+        x: 133,
+        y: 1
+      }, {
+        x: 134,
+        y: 2
+      }, {
+        x: 136,
+        y: 3
+      }, {
+        x: 137,
+        y: 2
+      }, {
+        x: 138,
+        y: 1
+      }, {
+        x: 143,
+        y: 4
+      }, {
+        x: 149,
+        y: 2
+      }, {
+        x: 157,
+        y: 3
+      }, {
+        x: 158,
+        y: 2
+      }, {
+        x: 159,
+        y: 1
+      }, {
+        x: 164,
+        y: 0
+      }, {
+        x: 169,
+        y: 0
+      }, {
+        x: 174,
+        y: 0
+      }, {
+        x: 179,
+        y: 0
+      }, {
+        x: 184,
+        y: 0
+      }, {
+        x: 189,
+        y: 0
+      }, {
+        x: 194,
+        y: 0
+      }, {
+        x: 199,
+        y: 0
+      }, {
+        x: 204,
+        y: 0
+      }, {
+        x: 209,
+        y: 0
+      }, {
+        x: 214,
+        y: 0
+      }
+    ]
+  }, {
+    'title': 'happyrock',
+    'path': 'music/happyrock.ogg',
+    'level': 'easy',
+    'type': 'random',
+    'height': 160,
+    'notes': [
+      {
+        x: 150,
+        y: 2
+      }
+    ]
+  }, {
+    'title': 'bossanova',
+    'path': 'music/bossanova.ogg',
+    'level': 'easy',
+    'type': 'random',
+    'height': 160,
+    'notes': [
+      {
+        x: 150,
+        y: 2
+      }
+    ]
+  }, {
+    'title': 'cute - random',
+    'type': 'random',
+    'path': 'music/cute.ogg',
+    'level': 'easy',
+    'height': 220,
+    'notes': []
+  }, {
+    'title': 'dubstep - random',
+    'type': 'random',
+    'path': 'music/dubstep.ogg',
+    'level': 'easy',
+    'height': 220,
+    'notes': []
+  }, {
+    'title': 'happyrock',
+    'path': 'music/happyrock.ogg',
+    'level': 'medium',
+    'type': 'random',
+    'height': 160,
+    'notes': [
+      {
+        x: 150,
+        y: 2
+      }
+    ]
+  }, {
+    'title': 'bossanova',
+    'path': 'music/bossanova.ogg',
+    'level': 'medium',
+    'type': 'random',
+    'height': 160,
+    'notes': [
+      {
+        x: 150,
+        y: 2
+      }
+    ]
+  }, {
+    'title': 'cute - random',
+    'type': 'random',
+    'path': 'music/cute.ogg',
+    'level': 'medium',
+    'height': 220,
+    'notes': []
+  }, {
+    'title': 'dubstep - random',
+    'type': 'random',
+    'path': 'music/dubstep.ogg',
+    'level': 'medium',
+    'height': 220,
+    'notes': []
+  }, {
+    'title': 'happyrock',
+    'path': 'music/happyrock.ogg',
+    'level': 'hard',
+    'type': 'random',
+    'height': 160,
+    'notes': [
+      {
+        x: 150,
+        y: 2
+      }
+    ]
+  }, {
+    'title': 'bossanova',
+    'path': 'music/bossanova.ogg',
+    'level': 'hard',
+    'type': 'random',
+    'height': 160,
+    'notes': [
+      {
+        x: 150,
+        y: 2
+      }
+    ]
+  }, {
+    'title': 'cute - random',
+    'type': 'random',
+    'path': 'music/cute.ogg',
+    'level': 'hard',
+    'height': 220,
+    'notes': []
+  }, {
+    'title': 'dubstep - random',
+    'type': 'random',
+    'path': 'music/dubstep.ogg',
+    'level': 'hard',
+    'height': 220,
+    'notes': []
   }
 ];
 
@@ -84,11 +1537,13 @@ module.exports.levelsDB = levelsDB;
 
 
 },{}],"/home/juancarlos/Github/guitar-hero-firefox-os/app.coffee":[function(require,module,exports){
-var App, React, checkFirstTime, initData, initialize;
+var App, React, checkFirstTime, initData, initialize, levelsDB;
 
 React = require('react');
 
 App = require('./components/App.react.coffee');
+
+levelsDB = require('./DB/levelsDB.coffee').levelsDB;
 
 initialize = function(value) {
   React.initializeTouchEvents(true);
@@ -96,8 +1551,14 @@ initialize = function(value) {
 };
 
 initData = function(value) {
-  var musicPoints;
-  musicPoints = [0, 0];
+  var i, len, musicPoints;
+  len = levelsDB.getData().length;
+  musicPoints = [];
+  i = 0;
+  while (i < len) {
+    musicPoints.push(0);
+    i++;
+  }
   return localforage.setItem('musicPoints', musicPoints).then(initialize);
 };
 
@@ -115,7 +1576,7 @@ localforage.getItem('firstTime').then(checkFirstTime);
 
 
 
-},{"./components/App.react.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/components/App.react.coffee","react":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/components/About.react.coffee":[function(require,module,exports){
+},{"./DB/levelsDB.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/DB/levelsDB.coffee","./components/App.react.coffee":"/home/juancarlos/Github/guitar-hero-firefox-os/components/App.react.coffee","react":"/home/juancarlos/Github/guitar-hero-firefox-os/node_modules/react/react.js"}],"/home/juancarlos/Github/guitar-hero-firefox-os/components/About.react.coffee":[function(require,module,exports){
 var About, React;
 
 React = require('react');
@@ -141,7 +1602,9 @@ module.exports = About = React.createClass({
       "className": 'text-center'
     }, "About"), React.createElement("ul", {
       "className": 'clear-list text-center'
-    }, React.createElement("li", null, "Developed by JCJ"), React.createElement("li", null, "Report bugs or suggestions to my email"), React.createElement("li", null, "juanc.jara@pucp.pe")));
+    }, React.createElement("li", null, "Developed by JCJ"), React.createElement("li", null, "Report bugs or suggestions to my email"), React.createElement("li", null, "juanc.jara@pucp.pe"), React.createElement("li", null, "Music: ", React.createElement("a", {
+      "href": 'http://www.bensound.com'
+    }, "http:\x2F\x2Fwww.bensound.com"))));
   }
 });
 
@@ -242,7 +1705,8 @@ module.exports = Game = React.createClass({
       modalMenu: null,
       modalFinish: null,
       points: 0,
-      hitText: ''
+      hitText: '',
+      songName: ''
     };
   },
   componentDidMount: function() {
@@ -287,17 +1751,27 @@ module.exports = Game = React.createClass({
     elem = levelsDB.getData()[idx];
     data = {
       song: elem.path,
-      music: elem.easy,
+      music: {
+        notes: elem.notes,
+        height: elem.height,
+        type: elem.type,
+        level: elem.level
+      },
       onFinish: this.finishGame,
       onHit: this.showText
     };
-    return guitar.start(data);
+    guitar.start(data);
+    return this.setState({
+      songName: elem.title,
+      level: elem.level
+    });
   },
   restart: function(modal) {
     modal.trigger('closeModal');
     return this.start(this.state.idx);
   },
   openModal: function() {
+    console.log('openModal');
     guitar.stop();
     return this.state.modalMenu.trigger('openModal');
   },
@@ -329,19 +1803,25 @@ module.exports = Game = React.createClass({
     className = 'game tabs ' + this.props.show;
     return React.createElement("div", {
       "className": className
-    }, React.createElement("canvas", {
+    }, React.createElement("div", {
+      "ref": 'hitText',
+      "className": 'hit-text'
+    }, this.state.hitText), React.createElement("div", {
+      "className": 'pull-left song-title'
+    }, this.state.songName), React.createElement("div", {
+      "className": 'pull-left song-level'
+    }, this.state.level), React.createElement("div", {
+      "className": 'open-menu pull-right',
+      "onTouchStart": this.openModal
+    }, React.createElement("span", {
+      "className": 'icon-pause'
+    })), React.createElement("div", {
+      "className": 'clear'
+    }), React.createElement("canvas", {
       "id": 'screen',
       "width": '300',
       "height": '400'
     }), React.createElement("div", {
-      "ref": 'hitText',
-      "className": 'hit-text'
-    }, this.state.hitText), React.createElement("div", {
-      "className": 'open-menu',
-      "onTouchEnd": this.openModal
-    }, React.createElement("span", {
-      "className": 'icon-pause'
-    })), React.createElement("div", {
       "className": 'modal finish-menu',
       "id": 'modalFinish'
     }, React.createElement("div", {
@@ -417,13 +1897,10 @@ module.exports = MainMenu = React.createClass({
     className = 'main-menu tabs ' + this.props.show;
     return React.createElement("div", {
       "className": className
-    }, React.createElement("h1", null, "Guitar Hero"), React.createElement("div", {
+    }, React.createElement("h1", null, "Guitar Heroes"), React.createElement("div", {
       "className": 'btn blue',
       "onTouchEnd": this.handleClick.bind(this, 'SongList')
     }, "Start"), React.createElement("div", {
-      "className": 'btn blue',
-      "onTouchEnd": this.handleClick.bind(this, 'Help')
-    }, "Help"), React.createElement("div", {
       "className": 'btn blue',
       "onTouchEnd": this.handleClick.bind(this, 'About')
     }, "About"));
@@ -448,13 +1925,15 @@ SongItem = React.createClass({
   render: function() {
     return React.createElement("li", {
       "className": 'song-item',
-      "key": this.props.key,
-      "onTouchEnd": this.handleClick.bind(this, this.props.idx)
+      "key": this.props.key
     }, React.createElement("span", {
       "className": 'icon-music'
     }), React.createElement("span", {
-      "className": 'title'
-    }, this.props.item.title), React.createElement("div", {
+      "className": 'title',
+      "onTouchEnd": this.handleClick.bind(this, this.props.idx)
+    }, this.props.item.title), React.createElement("span", {
+      "className": 'level'
+    }, this.props.item.level), React.createElement("div", {
       "className": 'points'
     }, this.props.item.points, " points"));
   }
@@ -574,10 +2053,7 @@ var Guitar = function() {
   this.music = new Music(this, this.player);
   this.bodies = [this.music, this.player];
   this.song;
-  var canvasPosition = {
-    x: $(canvas).offset().left,
-    y: $(canvas).offset().top
-  };
+  this.canvasPosition;
   this.startTime = (new Date()).getTime();
   
   this.active = true;
@@ -585,10 +2061,17 @@ var Guitar = function() {
   
   var self = this;
   var listener = function(e) {
-    console.log(e.changedTouches);
+    //console.log(e.changedTouches);
+    if (!self.canvasPosition) {
+      console.log('aca')
+      self.canvasPosition = {
+        x: $('#screen').offset().left,
+        y: $('#screen').offset().top
+      }
+    }
     var mouse = {
-      x: e.changedTouches[0].clientX - canvasPosition.x,
-      y: e.changedTouches[0].clientY - canvasPosition.y
+      x: e.changedTouches[0].clientX - self.canvasPosition.x,
+      y: e.changedTouches[0].clientY - self.canvasPosition.y
     }
     //var mouse = {
     //  x: e.pageX - canvasPosition.x,
@@ -602,9 +2085,9 @@ var Guitar = function() {
   }
   canvas.removeEventListener('touchstart', listener, false);
   canvas.addEventListener('touchstart',listener, false);
-  document.body.addEventListener('touchmove', function(event) {
+  /*document.body.addEventListener('touchmove', function(event) {
     event.preventDefault();
-  }, false);
+  }, false);*/
 };
 
 Guitar.prototype = {
@@ -615,7 +2098,6 @@ Guitar.prototype = {
     this.onFinish = data.onFinish;
     this.onHit = data.onHit;
     this.player.clear();
-
     var self = this;
     loadSound(data.song, function(song) {
       self.song = song;
@@ -624,6 +2106,9 @@ Guitar.prototype = {
   },
   stop: function() {
     this.song.pause();
+    /*for (var i = this.music.test.length - 1; i >= 0; i--) {
+      console.log('{x:'+this.music.test[i]+', y: 0},')
+    };*/
     this.active = false;
   },
   resume: function() {
@@ -645,6 +2130,9 @@ Guitar.prototype = {
   },
   finish:function() {
     if (!this.active) return
+    /*for (var i = this.music.test.length - 1; i >= 0; i--) {
+      console.log('{x:'+this.music.test[i]+', y: 0},')
+    };*/
     this.active = false;
     this.song.pause();
     var finishTime = (new Date()).getTime();
@@ -674,12 +2162,17 @@ Guitar.prototype = {
 };
 
 var Player = function(game) {
-  this.combo = 0;
+  this.mult = 0;
   this.game = game;
   this.points = {
     val: 0,
     x: 10,
     y: 40
+  }
+  this.combo = {
+    val: 0,
+    x: 10,
+    y: 65
   }
   this.center = {x: 200, y : this.game.size.y};
   this.size = {
@@ -708,11 +2201,21 @@ Player.prototype = {
     return res;
   },
   addPoints: function(points) {
-    this.points.val += points;
-    this.combo += 1;
+    if (points > 20) {;
+      if (this.mult <= 25) {
+        this.mult += 1;
+        this.combo.val = parseInt( this.mult / 5 ) + 1;
+      }
+    } else {
+      this.combo.val = 1;
+      this.mult = 0;
+    }
+    this.points.val += points * this.combo.val;
+    
   },
   clearCombo: function() {
-    this.combo = 1;
+    this.mult = 0;
+    this.combo.val = 1;
     this.game.shake();
   },
   update: function() {
@@ -720,7 +2223,8 @@ Player.prototype = {
   },
   clear: function() {
     this.points.val = 0;
-    this.combo = 0;
+    this.mult = 0;
+    this.combo.val = 1;
   },
   draw: function(screen) {
     this.buttons.forEach(function(item) {
@@ -728,28 +2232,37 @@ Player.prototype = {
     });
 
     drawText(screen, this.points);
+    drawText(screen, {
+      val: 'x'+ this.combo.val,
+      x: this.combo.x,
+      y: this.combo.y
+    }, '30')
   }
 };
 
 var Music = function(game, player) {
   this.player = player;
   this.game = game;
+  this.step = 3;
+  this.test = []
   this.matrix = [];
-  for (var i = 0; i < 50; i++) {
-    var arr = [];
-    for (var j = 0; j < 5; j++) {
-      arr.push(null);
-    }
-    this.matrix.push(arr);
-  }
-  this.matrix[35][0] = {hit: false, check: false};
-  this.matrix[38][2] = {hit: false, check: false};
-  this.matrix[30][3] = {hit: false, check: false};
-  this.matrix[48][2] = {hit: false, check: false};
-  this.matrix[0][3] = {hit: false, check: false};
   this.size = {x: 50, y: 50};
   this.center = {x: this.game.size.x / 2, y : 0};
   this.height = this.game.size.y / this.size.y;
+  this.random = {
+    'easy': {
+      percentage: 0.55,
+      maxCol: 3
+    }, 
+    'medium': {
+      percentage: 0.70,
+      maxCol: 4
+    }, 
+    'hard': {
+      percentage: 0.85,
+      maxCol: 5
+    }
+  }
 }
 
 Music.prototype = {
@@ -765,6 +2278,9 @@ Music.prototype = {
       this.matrix.push(arr);
     };
     var x, y;
+    if (music.type === 'random') {
+      music.notes = this.generateRandom(music);
+    }
     for (var i = 0; i < music.notes.length; i++) {
       x = music.notes[i].x;
       y = music.notes[i].y;
@@ -773,6 +2289,31 @@ Music.prototype = {
         check: false
       }
     };
+  },
+  generateRandom: function(data) {
+    var height = data.height-10;
+    var take = parseInt(this.random[data.level].percentage * height, 10);
+    var temp = [];
+    var notes = [];
+    for (var i = 0; i < height; i++) {
+      temp.push(i);
+    }
+    var valTemp;
+    for (var i = 0; i < 300; i++) {
+      var rdn1 = Math.floor(Math.random() * height);
+      var rdn2 = Math.floor(Math.random() * height);
+      valTemp = temp[rdn1];
+      temp[rdn1] = temp[rdn2];
+      temp[rdn2] = valTemp;
+    };
+    var maxNote = this.random[data.level].maxCol;
+    for (var i = 0; i < take; i++) {
+      notes.push({
+        x: temp[i],
+        y: Math.floor(Math.random() * maxNote)
+      });
+    };
+    return notes;
   },
   handleClick: function(mouse) {
     if (this.noMoreNotes()) {
@@ -785,14 +2326,16 @@ Music.prototype = {
     if (y >= self.matrix.length) {
       return;
     }
+    this.test.push(y)
     var rows = this.getLastRow();
     this.player.buttons.forEach(function(item, i) {
+     
       if (item.center.x - item.size.x/2 < mouse.x &&
           item.center.x + item.size.x/2 > mouse.x &&
           item.center.y - item.size.y/2 < mouse.y &&
           item.center.y + item.size.y/2 > mouse.y) {
-        
         if (!rows[i]) {
+          self.game.showText('Miss');
           self.player.clearCombo();
           return;
         }
@@ -833,10 +2376,9 @@ Music.prototype = {
       this.game.finish();
       return;
     }
-    if (this.center.y % this.size.y != 2) {
+    if ( (this.center.y % this.size.y) == 0) {
       return;
     }
-
     var lenRows = this.matrix.length;
     var actualRow = parseInt(this.center.y / this.size.y, 10);
     var y = lenRows - actualRow - 1;
@@ -890,7 +2432,7 @@ Music.prototype = {
     return res;
   },    
   update: function() {
-    this.center.y += 2;
+    this.center.y += this.step;
     this.validate();
 
   },
@@ -934,8 +2476,9 @@ var drawRect = function(screen, body) {
                   body.size.x,
                   body.size.y);
 };
-var drawText = function(screen, body) {
-  screen.font = "40px Calibri";
+var drawText = function(screen, body, size) {
+  size = size || '40'
+  screen.font = size + 'px Calibri';
   screen.fillStyle = 'white'
   screen.fillText(body.val, body.x, body.y);
 }

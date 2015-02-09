@@ -12,7 +12,8 @@ module.exports = Game = React.createClass
     modalMenu: null,
     modalFinish: null,
     points: 0,
-    hitText: ''
+    hitText: '',
+    songName: ''
   componentDidMount: ->
     guitar = new Guitar()
     $('.modal').easyModal {
@@ -37,14 +38,22 @@ module.exports = Game = React.createClass
     elem = levelsDB.getData()[idx]
     data = 
       song: elem.path
-      music: elem.easy
+      music:
+        notes: elem.notes
+        height: elem.height
+        type: elem.type
+        level: elem.level
       onFinish: @finishGame,
       onHit: @showText
     guitar.start data
+    @setState 
+      songName: elem.title
+      level: elem.level
   restart: (modal)->
     modal.trigger 'closeModal'
     @start @state.idx
   openModal: ->
+    console.log 'openModal'
     guitar.stop()
     @state.modalMenu.trigger 'openModal'
   finishModal: ->
@@ -65,21 +74,28 @@ module.exports = Game = React.createClass
   render: ->
     className = 'game tabs '+@props.show
     <div className = {className}>
-      <canvas 
-        id = 'screen' 
-        width = '300' 
-        height = '400'>
-      </canvas>
       <div 
         ref = 'hitText'
         className = 'hit-text'>
         {@state.hitText}
       </div>
+      <div className = 'pull-left song-title'>
+        {@state.songName}
+      </div>
+      <div className = 'pull-left song-level'>
+        {@state.level}
+      </div>
       <div
-        className = 'open-menu'
-        onTouchEnd = {@openModal} >
+        className = 'open-menu pull-right'
+        onTouchStart = {@openModal} >
         <span className = 'icon-pause'></span>
       </div>
+      <div className = 'clear'></div>
+      <canvas 
+        id = 'screen' 
+        width = '300' 
+        height = '400'>
+      </canvas>
       <div
         className = 'modal finish-menu'
         id = 'modalFinish' >

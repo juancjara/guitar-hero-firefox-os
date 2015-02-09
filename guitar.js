@@ -12,10 +12,7 @@ var Guitar = function() {
   this.music = new Music(this, this.player);
   this.bodies = [this.music, this.player];
   this.song;
-  var canvasPosition = {
-    x: $(canvas).offset().left,
-    y: $(canvas).offset().top
-  };
+  this.canvasPosition;
   this.startTime = (new Date()).getTime();
   
   this.active = true;
@@ -23,10 +20,17 @@ var Guitar = function() {
   
   var self = this;
   var listener = function(e) {
-    console.log(e.changedTouches);
+    //console.log(e.changedTouches);
+    if (!self.canvasPosition) {
+      console.log('aca')
+      self.canvasPosition = {
+        x: $('#screen').offset().left,
+        y: $('#screen').offset().top
+      }
+    }
     var mouse = {
-      x: e.changedTouches[0].clientX - canvasPosition.x,
-      y: e.changedTouches[0].clientY - canvasPosition.y
+      x: e.changedTouches[0].clientX - self.canvasPosition.x,
+      y: e.changedTouches[0].clientY - self.canvasPosition.y
     }
     //var mouse = {
     //  x: e.pageX - canvasPosition.x,
@@ -40,9 +44,9 @@ var Guitar = function() {
   }
   canvas.removeEventListener('touchstart', listener, false);
   canvas.addEventListener('touchstart',listener, false);
-  document.body.addEventListener('touchmove', function(event) {
+  /*document.body.addEventListener('touchmove', function(event) {
     event.preventDefault();
-  }, false);
+  }, false);*/
 };
 
 Guitar.prototype = {
@@ -53,7 +57,6 @@ Guitar.prototype = {
     this.onFinish = data.onFinish;
     this.onHit = data.onHit;
     this.player.clear();
-
     var self = this;
     loadSound(data.song, function(song) {
       self.song = song;
@@ -62,6 +65,9 @@ Guitar.prototype = {
   },
   stop: function() {
     this.song.pause();
+    /*for (var i = this.music.test.length - 1; i >= 0; i--) {
+      console.log('{x:'+this.music.test[i]+', y: 0},')
+    };*/
     this.active = false;
   },
   resume: function() {
@@ -83,6 +89,9 @@ Guitar.prototype = {
   },
   finish:function() {
     if (!this.active) return
+    /*for (var i = this.music.test.length - 1; i >= 0; i--) {
+      console.log('{x:'+this.music.test[i]+', y: 0},')
+    };*/
     this.active = false;
     this.song.pause();
     var finishTime = (new Date()).getTime();
@@ -112,12 +121,17 @@ Guitar.prototype = {
 };
 
 var Player = function(game) {
-  this.combo = 0;
+  this.mult = 0;
   this.game = game;
   this.points = {
     val: 0,
     x: 10,
     y: 40
+  }
+  this.combo = {
+    val: 0,
+    x: 10,
+    y: 65
   }
   this.center = {x: 200, y : this.game.size.y};
   this.size = {
@@ -146,11 +160,21 @@ Player.prototype = {
     return res;
   },
   addPoints: function(points) {
-    this.points.val += points;
-    this.combo += 1;
+    if (points > 20) {;
+      if (this.mult <= 25) {
+        this.mult += 1;
+        this.combo.val = parseInt( this.mult / 5 ) + 1;
+      }
+    } else {
+      this.combo.val = 1;
+      this.mult = 0;
+    }
+    this.points.val += points * this.combo.val;
+    
   },
   clearCombo: function() {
-    this.combo = 1;
+    this.mult = 0;
+    this.combo.val = 1;
     this.game.shake();
   },
   update: function() {
@@ -158,7 +182,8 @@ Player.prototype = {
   },
   clear: function() {
     this.points.val = 0;
-    this.combo = 0;
+    this.mult = 0;
+    this.combo.val = 1;
   },
   draw: function(screen) {
     this.buttons.forEach(function(item) {
@@ -166,28 +191,37 @@ Player.prototype = {
     });
 
     drawText(screen, this.points);
+    drawText(screen, {
+      val: 'x'+ this.combo.val,
+      x: this.combo.x,
+      y: this.combo.y
+    }, '30')
   }
 };
 
 var Music = function(game, player) {
   this.player = player;
   this.game = game;
+  this.step = 3;
+  this.test = []
   this.matrix = [];
-  for (var i = 0; i < 50; i++) {
-    var arr = [];
-    for (var j = 0; j < 5; j++) {
-      arr.push(null);
-    }
-    this.matrix.push(arr);
-  }
-  this.matrix[35][0] = {hit: false, check: false};
-  this.matrix[38][2] = {hit: false, check: false};
-  this.matrix[30][3] = {hit: false, check: false};
-  this.matrix[48][2] = {hit: false, check: false};
-  this.matrix[0][3] = {hit: false, check: false};
   this.size = {x: 50, y: 50};
   this.center = {x: this.game.size.x / 2, y : 0};
   this.height = this.game.size.y / this.size.y;
+  this.random = {
+    'easy': {
+      percentage: 0.55,
+      maxCol: 3
+    }, 
+    'medium': {
+      percentage: 0.70,
+      maxCol: 4
+    }, 
+    'hard': {
+      percentage: 0.85,
+      maxCol: 5
+    }
+  }
 }
 
 Music.prototype = {
@@ -203,6 +237,9 @@ Music.prototype = {
       this.matrix.push(arr);
     };
     var x, y;
+    if (music.type === 'random') {
+      music.notes = this.generateRandom(music);
+    }
     for (var i = 0; i < music.notes.length; i++) {
       x = music.notes[i].x;
       y = music.notes[i].y;
@@ -211,6 +248,31 @@ Music.prototype = {
         check: false
       }
     };
+  },
+  generateRandom: function(data) {
+    var height = data.height-10;
+    var take = parseInt(this.random[data.level].percentage * height, 10);
+    var temp = [];
+    var notes = [];
+    for (var i = 0; i < height; i++) {
+      temp.push(i);
+    }
+    var valTemp;
+    for (var i = 0; i < 300; i++) {
+      var rdn1 = Math.floor(Math.random() * height);
+      var rdn2 = Math.floor(Math.random() * height);
+      valTemp = temp[rdn1];
+      temp[rdn1] = temp[rdn2];
+      temp[rdn2] = valTemp;
+    };
+    var maxNote = this.random[data.level].maxCol;
+    for (var i = 0; i < take; i++) {
+      notes.push({
+        x: temp[i],
+        y: Math.floor(Math.random() * maxNote)
+      });
+    };
+    return notes;
   },
   handleClick: function(mouse) {
     if (this.noMoreNotes()) {
@@ -223,14 +285,16 @@ Music.prototype = {
     if (y >= self.matrix.length) {
       return;
     }
+    this.test.push(y)
     var rows = this.getLastRow();
     this.player.buttons.forEach(function(item, i) {
+     
       if (item.center.x - item.size.x/2 < mouse.x &&
           item.center.x + item.size.x/2 > mouse.x &&
           item.center.y - item.size.y/2 < mouse.y &&
           item.center.y + item.size.y/2 > mouse.y) {
-        
         if (!rows[i]) {
+          self.game.showText('Miss');
           self.player.clearCombo();
           return;
         }
@@ -271,10 +335,9 @@ Music.prototype = {
       this.game.finish();
       return;
     }
-    if (this.center.y % this.size.y != 2) {
+    if ( (this.center.y % this.size.y) == 0) {
       return;
     }
-
     var lenRows = this.matrix.length;
     var actualRow = parseInt(this.center.y / this.size.y, 10);
     var y = lenRows - actualRow - 1;
@@ -328,7 +391,7 @@ Music.prototype = {
     return res;
   },    
   update: function() {
-    this.center.y += 2;
+    this.center.y += this.step;
     this.validate();
 
   },
@@ -372,8 +435,9 @@ var drawRect = function(screen, body) {
                   body.size.x,
                   body.size.y);
 };
-var drawText = function(screen, body) {
-  screen.font = "40px Calibri";
+var drawText = function(screen, body, size) {
+  size = size || '40'
+  screen.font = size + 'px Calibri';
   screen.fillStyle = 'white'
   screen.fillText(body.val, body.x, body.y);
 }

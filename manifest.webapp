@@ -1,14 +1,13 @@
 {
-  "name": "guitar hero",
-  "description": "you know",
+  "name": "Guitar Heroes",
+  "description": "Game similar to Guitar hero",
   "icons": {
-    "60": "",
-    "128": ""
+    "128": "/images/guitar128.png"
   },
   "orientation": "portrait",
   "developer": {
-    "name": "GG",
-    "url": "asdf"
+    "name": "Juan Carlos Jara",
+    "url": "https://github.com/juancjara"
   },
   "launch_path": "/index.html",
   "default_locale": "en"

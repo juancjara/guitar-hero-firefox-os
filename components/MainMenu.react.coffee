@@ -8,16 +8,11 @@ module.exports = MainMenu = React.createClass
   render: ->
     className = 'main-menu tabs '+@props.show
     <div className = {className}>
-      <h1>Guitar Hero</h1>
+      <h1>Guitar Heroes</h1>
       <div 
         className = 'btn blue'
         onTouchEnd = {@handleClick.bind(this, 'SongList')} >
         Start
-      </div>
-      <div 
-        className = 'btn blue'
-        onTouchEnd = {@handleClick.bind(this, 'Help')} >
-        Help
       </div>
       <div 
         className = 'btn blue'

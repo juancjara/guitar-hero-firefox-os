@@ -7,8 +7,9 @@
     "test": "mocha test/*.coffee --compilers coffee:coffee-script/register",
     "gulp": "gulp",
     "watch": "watchify app.coffee -o bundle.js -v",
-    "browserify": "browserify -t coffee-reactify app.coffee > bundle.js",
-    "build": "npm run browserify ",
+    "browserify": "browserify -t coffee-reactify app.coffee > bundle.js | ",
+    "distBrowserify": "uglifyjs --overwrite bundle.js",
+    "build": "npm run distBrowserify & gulp",
     "start": "npm run watch & gulp"
   },
   "author": "",

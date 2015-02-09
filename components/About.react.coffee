@@ -19,5 +19,8 @@ module.exports = About = React.createClass
         <li>Developed by JCJ</li>
         <li>Report bugs or suggestions to my email</li>
         <li>juanc.jara@pucp.pe</li>
+        <li>Music: 
+          <a href = 'http://www.bensound.com'>http://www.bensound.com</a>
+        </li>
       </ul>
     </div>

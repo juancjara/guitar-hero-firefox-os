@@ -8,11 +8,13 @@ SongItem = React.createClass
   render: ->
     <li 
       className = 'song-item'
-      key = {@props.key}
-      onTouchEnd={@handleClick.bind(this, @props.idx)} >
+      key = {@props.key}>
       <span className = 'icon-music' ></span>
-      <span className = 'title' >
+      <span className = 'title' onTouchEnd={@handleClick.bind(this, @props.idx)} >
         {@props.item.title}
+      </span>
+      <span className = 'level'>
+        {@props.item.level}
       </span>
       <div className = 'points' >
         {@props.item.points} points

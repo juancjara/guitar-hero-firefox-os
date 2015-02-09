@@ -33,6 +33,9 @@
   font-family: 'Roboto'
   src: url('fonts/Roboto-Regular.ttf')
 
+canvas
+  z-index: 1
+
 body
   font-family: 'Roboto', sans-serif
   background-color: #303030
@@ -92,20 +95,26 @@ h2
   .btn
     padding: 8px 10px
   .total-points
-    font-size: 2em
+    font-size: 1.6em
   .songs
     margin: 15px 10px
     .song-item
       margin: 22px 10px
       .title
         padding-left: 10px
-        font-size: 1.3em
+        font-size: 1.1em
         font-weight: 600
+      .level
+        font-size: .9em
+        margin-left: 10px
+        vertical-align: initial
       .points
         padding-left: 35px
         font-size: 0.9em
 
 .about
+  a
+    color: white
   h2
     margin-bottom: 40px
   li
@@ -113,27 +122,34 @@ h2
 
 .game
   position: relative
+  .song-title
+    font-size: 1.6em
+    max-height: 50px
+    margin-left: 12px
+  .song-level
+    font-size: 0.9em
+    margin-left: 10px
+    margin-top: 10px
   .hit-text
     font-size: 25px
     text-align: center;
     position: absolute;
     left: 0
     right: 0
-    top: 50px
+    top: 70px
+  .finish-menu
+    left: 40% !important
   .open-menu
     background-color: black
     border: 5px solid white
-    position: absolute
     border-radius: 50%
-    right: 10px
-    top: 10px
     text-align: center
     color: black
     .icon-pause
-      padding: 10px
-      line-height: 1.5em
+      padding: 10px 5px
+      line-height: 1.4em
       color: white
-      font-size: 1.5em
+      font-size: 1.4em
   .points
     text-align: center
     font-size: 1.6em
