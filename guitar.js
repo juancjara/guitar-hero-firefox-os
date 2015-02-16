@@ -12,6 +12,7 @@ var Guitar = function() {
   this.music = new Music(this, this.player);
   this.bodies = [this.music, this.player];
   this.song;
+  this.shouldShake = false;
   this.canvasPosition;
   this.startTime = (new Date()).getTime();
   
@@ -56,6 +57,9 @@ Guitar.prototype = {
     this.music.setMusic(data.music);
     this.onFinish = data.onFinish;
     this.onHit = data.onHit;
+    if (data.shake) {
+      this.shouldShake = data.shake;
+    }
     this.player.clear();
     var self = this;
     loadSound(data.song, function(song) {
@@ -116,7 +120,13 @@ Guitar.prototype = {
     })
   },
   shake: function() {
-    window.navigator.vibrate(300);
+    if (this.shouldShake) {
+      window.navigator.vibrate(300);
+    }
+  },
+  setShake: function(val) {
+    console.log('setShake', val)
+    this.shouldShake = val;
   }
 };
 

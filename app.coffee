@@ -2,28 +2,30 @@ React = require 'react'
 App = require './components/App.react.coffee'
 {levelsDB} = require './DB/levelsDB.coffee'
 
-initialize = (value) ->
-  React.initializeTouchEvents(true);
-  React.render <App />, document.getElementById('react-app')
-  return
+checkLocalForage = (field, defValue, cb) ->
+  setValue = (res) ->
+    if res
+      cb()
+    else
+      localforage.setItem(field, defValue). then cb
+  localforage.getItem(field).then setValue
 
-initData = (value) ->
+initData = () ->
   len = levelsDB.getData().length
   musicPoints = []
   i = 0
   while i < len
     musicPoints.push(0)
     i++
-  localforage.setItem('musicPoints', musicPoints).then initialize
+  return musicPoints
 
-checkFirstTime = (value) ->
-  if value
-    initialize()
-  else
-    localforage.clear () ->
-      localforage.setItem('firstTime', 'done').then initData
+initialize = (value) ->
+  React.initializeTouchEvents(true);
+  React.render <App />, document.getElementById('react-app')
   return
 
-localforage.getItem('firstTime').then checkFirstTime
+setConfig = () ->
+  checkLocalForage('config', {vibrate: false}, initialize)
 
+checkLocalForage('musicPoints', initData(), setConfig)
 

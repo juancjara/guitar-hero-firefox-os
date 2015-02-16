@@ -8,6 +8,7 @@ guitar = null
 module.exports = Game = React.createClass
   getInitialState: ->
     Dispatcher.subscribe 'startGame', @startGame
+    Dispatcher.subscribe 'setShake', @setShake
     idx: -1,
     modalMenu: null,
     modalFinish: null,
@@ -16,15 +17,19 @@ module.exports = Game = React.createClass
     songName: ''
   componentDidMount: ->
     guitar = new Guitar()
-    $('.modal').easyModal {
-      top: 150
-      overlay: 0.2
-      overlayClose: false
-      closeOnEscape: false 
-    }
-    @setState 
-      modalMenu: $('#modalMenu')
-      modalFinish: $('#modalFinish')
+    self = @
+    localforage.getItem('config', (err, val) ->
+      guitar.setShake(val.vibrate);
+      $('.modal').easyModal {
+        top: 150
+        overlay: 0.2
+        overlayClose: false
+        closeOnEscape: false 
+      }
+      self.setState 
+        modalMenu: $('#modalMenu')
+        modalFinish: $('#modalFinish')
+    )
   showText: (obj) ->
     console.log 'showText', obj.text
     clearInterval(@timeout) if @timeout?
@@ -34,6 +39,12 @@ module.exports = Game = React.createClass
   startGame: (idx) ->
     @start idx
     @setState idx: idx
+  setShake: (value) ->
+    guitar.setShake(value)
+    localforage.getItem('config', (err, val) ->
+      val.vibrate = value
+      localforage.setItem('config', val, (err, res) -> )
+    )
   start: (idx) ->
     elem = levelsDB.getData()[idx]
     data = 
