@@ -1,11 +1,11 @@
 //@import url(http://fonts.googleapis.com/css?family=Roboto:400italic,300,700,400)
 @font-face 
   font-family: 'icomoon';
-  src:url('fonts/icomoon.eot?-ud9zp3');
-  src:url('fonts/icomoon.eot?#iefix-ud9zp3') format('embedded-opentype'),
-    url('fonts/icomoon.woff?-ud9zp3') format('woff'),
-    url('fonts/icomoon.ttf?-ud9zp3') format('truetype'),
-    url('fonts/icomoon.svg?-ud9zp3#icomoon') format('svg');
+  src:url('fonts/icomoon.eot?4r9emi')
+  src:url('fonts/icomoon.eot?#iefix4r9emi') format('embedded-opentype'),
+    url('fonts/icomoon.woff?4r9emi') format('woff'),
+    url('fonts/icomoon.ttf?4r9emi') format('truetype'),
+    url('fonts/icomoon.svg?4r9emi#icomoon') format('svg')
   font-weight: normal;
   font-style: normal;
 
@@ -37,6 +37,9 @@
 
 .icon-settings:before
   content: "\e994"
+
+.icon-trophy:before
+  content: "\e600"
 
 @font-face
   font-family: 'Roboto'
@@ -79,6 +82,7 @@ body
   padding: 2em
   
 .btn
+  border: none
   border-radius: 5px
   padding: 15px 10px
 
@@ -133,6 +137,15 @@ h2
         padding-left: 35px
         font-size: 0.9em
 
+.loader
+  display: table
+  margin-top: 30%
+  width: 100%
+  .container
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
 .about
   a
     color: white
@@ -150,6 +163,41 @@ h2
     font-size: 2em
   li
     margin-top: 10px
+
+.ranking
+  h2
+    margin-top: 8px
+    margin-left: 40px
+  .rankings
+    margin: 0 auto
+    th
+      padding: 0 10px
+    td
+      padding: 0px 10px
+  .my-data 
+    margin-top: 20px
+    div
+      margin-top: 10px
+      margin-left: 20px
+  .offline
+    margin-top: 40%
+    button
+      display: table
+      margin: 0 auto
+  .create-user
+    padding: 0 15px
+    .error
+      margin-top: 5px
+      margin-right: 20px
+      text-align: right
+    input
+      margin-left: 6px
+      border-radius: 4px
+      border: none
+      padding: 4px
+    button
+      margin-top: 10px
+      margin-right: 20px
 
 .settings
   ul

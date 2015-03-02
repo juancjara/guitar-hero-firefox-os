@@ -23,7 +23,6 @@ var Guitar = function() {
   var listener = function(e) {
     //console.log(e.changedTouches);
     if (!self.canvasPosition) {
-      console.log('aca')
       self.canvasPosition = {
         x: $('#screen').offset().left,
         y: $('#screen').offset().top
@@ -100,7 +99,6 @@ Guitar.prototype = {
     this.song.pause();
     var finishTime = (new Date()).getTime();
     var time = (finishTime - this.startTime) / 1000;
-    console.log('demoro', time);
     this.onFinish(this.player.points.val);
   },
   showText: function(text) {
@@ -125,7 +123,6 @@ Guitar.prototype = {
     }
   },
   setShake: function(val) {
-    console.log('setShake', val)
     this.shouldShake = val;
   }
 };

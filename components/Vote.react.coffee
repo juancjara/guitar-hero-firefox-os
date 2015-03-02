@@ -2,8 +2,6 @@ React = require 'react'
 {Dispatcher} = require './../dispatcher.coffee'
 
 module.exports = Vote = React.createClass
-  componentDidMount: ->
-    console.log 'Vote'
   handleClick: (to) ->
     @props.changeTab('Vote', to)
   render: ->

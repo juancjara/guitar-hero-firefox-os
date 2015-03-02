@@ -1,6 +1,7 @@
 React = require 'react'
 App = require './components/App.react.coffee'
 {levelsDB} = require './DB/levelsDB.coffee'
+{ParseMng} = require './DB/ParseMng.coffee'
 
 checkLocalForage = (field, defValue, cb) ->
   setValue = (res) ->

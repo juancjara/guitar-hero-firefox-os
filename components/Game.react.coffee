@@ -31,7 +31,6 @@ module.exports = Game = React.createClass
         modalFinish: $('#modalFinish')
     )
   showText: (obj) ->
-    console.log 'showText', obj.text
     clearInterval(@timeout) if @timeout?
     @setState hitText: obj.text
     clearText = => @setState hitText: ''
@@ -64,7 +63,6 @@ module.exports = Game = React.createClass
     modal.trigger 'closeModal'
     @start @state.idx
   openModal: ->
-    console.log 'openModal'
     guitar.stop()
     @state.modalMenu.trigger 'openModal'
   finishModal: ->

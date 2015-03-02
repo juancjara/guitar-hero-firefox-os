@@ -1,8 +1,6 @@
 React = require 'react'
 
 module.exports = MainMenu = React.createClass
-  componentDidMount: ->
-    console.log 'MainMenu'
   handleClick: (to) ->
     console.log('ggwp')
     @props.changeTab('MainMenu', to)
@@ -15,6 +13,10 @@ module.exports = MainMenu = React.createClass
         onTouchEnd = {@handleClick.bind(this, 'SongList')} >
         Start
       </div>
+      <span
+        className = 'btn-icon blue icon-trophy'
+        onTouchEnd = {@handleClick.bind(this, 'Ranking')} >
+      </span>
       <span
         className = 'btn-icon blue icon-settings'
         onTouchEnd = {@handleClick.bind(this, 'Settings')} >

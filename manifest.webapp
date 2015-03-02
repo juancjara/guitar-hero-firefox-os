@@ -1,6 +1,7 @@
 {
   "name": "Guitar Heroes",
   "description": "Game similar to Guitar hero",
+  "version": "1.2.0",
   "icons": {
     "128": "/images/guitar128.png"
   },

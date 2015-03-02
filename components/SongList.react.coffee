@@ -51,7 +51,6 @@ module.exports = SongList = React.createClass
     points = 0
     self = @
     localforage.getItem 'musicPoints', (err, musicPoints) ->
-      console.log 'songlist localforage', musicPoints
       i = 0
       while i < musicPoints.length
         points += musicPoints[i]

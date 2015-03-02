@@ -6,6 +6,7 @@ About = require './About.react.coffee'
 Game = require './Game.react.coffee'
 Vote = require './Vote.react.coffee'
 Settings = require './Settings.react.coffee'
+Ranking = require './Ranking.react.coffee'
 {Dispatcher} = require './../dispatcher.coffee'
 
 module.exports = App = React.createClass
@@ -18,12 +19,13 @@ module.exports = App = React.createClass
       'Vote':
         show: '' 
       'About':
-        show: ''      
+        show: ''
       'SongList':
         show: ''
       'Game':
         show: ''
-        data: null
+      'Ranking':
+        show: ''
   componentDidMount: ->
     console.log 'all'
   changeTab: (from, to) ->
@@ -51,4 +53,7 @@ module.exports = App = React.createClass
       <Game 
         changeTab = {@changeTab} 
         show = @state.tabs['Game'].show />
+      <Ranking 
+        changeTab = {@changeTab} 
+        show = @state.tabs['Ranking'].show />
     </div>

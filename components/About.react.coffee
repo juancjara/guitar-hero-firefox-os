@@ -1,8 +1,6 @@
 React = require 'react'
 
 module.exports = About = React.createClass
-  componentDidMount: ->
-    console.log 'About'
   handleClick: (to) ->
     @props.changeTab('About', to)
   render: ->
